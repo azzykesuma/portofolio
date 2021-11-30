@@ -153,32 +153,28 @@ body {
 }
 
 /* Fading animation */
-.scroll {
-  -webkit-animation-name: scroll;
+.slide {
+  -webkit-animation-name: slide;
   -webkit-animation-duration: 1.5s;
-  animation-name: scroll;
+  animation-name: slide;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
 }
 
-@-webkit-keyframes scroll {
+@-webkit-keyframes slide {
   from {
-    -webkit-transform: translateX(3000px);
-            transform: translateX(3000px);
+    opacity: 0;
   }
   to {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    opaity: 1;
   }
 }
-@keyframes scroll {
+@keyframes slide {
   from {
-    -webkit-transform: translateX(3000px);
-            transform: translateX(3000px);
+    opacity: 0;
   }
   to {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    opaity: 1;
   }
 }
 .switch {
@@ -315,6 +311,7 @@ header .hamburger .line {
 }
 .work .card {
   width: 200px;
+  position: relative;
 }
 .work .card img {
   border-radius: 20px;
@@ -322,4 +319,146 @@ header .hamburger .line {
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+}
+.work .card img:hover {
+  opacity: 0.5;
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
+}
+.work .workDescription {
+  display: none;
+  position: absolute;
+  color: #102542;
+  top: 30%;
+  text-align: center;
+  background-color: #9E9C9C;
+  -webkit-animation: fadein 0.5s ease-in-out;
+          animation: fadein 0.5s ease-in-out;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  padding: 15px;
+}
+.work .workDescription h3 {
+  font-size: 1.4em;
+  color: #484B6A;
+  margin-bottom: 0.5em;
+}
+.work .workDescription p {
+  color: white;
+}
+@-webkit-keyframes fadein {
+  from {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  from {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.work .work_active {
+  display: block;
+}
+.work .tabletMode {
+  display: none;
+}
+
+.tools {
+  background-color: #FAFAFA;
+  padding: 10px;
+}
+.tools h2 {
+  text-align: center;
+  padding-top: 1em;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  color: #102542;
+}
+.tools .toolsWrap {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 10px auto;
+  grid-template-rows: auto auto;
+  -ms-grid-columns: 1fr 10px 1fr 10px 1fr 10px 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.tools .toolsWrap > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+.tools .toolsWrap > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+.tools .toolsWrap > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+}
+.tools .toolsWrap > *:nth-child(4) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 7;
+}
+.tools .toolsWrap > *:nth-child(5) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+.tools .toolsWrap > *:nth-child(6) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}
+.tools .toolsWrap > *:nth-child(7) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+}
+.tools .toolsWrap > *:nth-child(8) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 7;
+}
+.tools .toolsWrap div {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+.recentWork {
+  background-color: #E4E5F1;
+  padding: 10px;
+}
+.recentWork h2 {
+  text-align: center;
+  padding-top: 1em;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  color: #102542;
 }

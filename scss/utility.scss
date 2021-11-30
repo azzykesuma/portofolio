@@ -80,21 +80,21 @@
   }
   
   /* Fading animation */
-  .scroll {
-    -webkit-animation-name: scroll;
+  .slide {
+    -webkit-animation-name: slide;
     -webkit-animation-duration: 1.5s;
-    animation-name: scroll;
+    animation-name: slide;
     animation-duration: .5s;
   }
   
-  @-webkit-keyframes scroll {
-    from {transform: translateX(3000px);}
-    to {transform: translateX(0);}
+  @-webkit-keyframes slide {
+    from {opacity: 0;}
+    to {opaity: 1;}
   }
   
-  @keyframes scroll {
-    from {transform: translateX(3000px);}
-    to {transform: translateX(0);}
+  @keyframes slide {
+    from {opacity: 0;}
+    to {opaity: 1;}
   }
 
   // toggle
