@@ -31,8 +31,8 @@ const webDev = document.getElementById('web-development');
 const workDescription = document.querySelector('.workDescription');
 console.log(workDescription);
 // make hover function
-webDev.addEventListener('mouseenter', mouse_enter);
-webDev.addEventListener('mouseleave', mouse_leave);
+webDev.addEventListener('mouseover', mouse_enter);
+webDev.addEventListener('mouseout', mouse_leave);
 
 function mouse_enter() {
   // webDev.style.opacity = '.6';
@@ -41,4 +41,56 @@ function mouse_enter() {
 function mouse_leave() {
   // webDev.style.opacity = '1';
   workDescription.classList.remove('work_active')
+}
+
+// form validation
+const form = document.querySelector('form');
+const name = document.getElementById('name');
+const email = document.getElementById('email');
+const message = document.getElementById('message');
+const error = document.querySelectorAll('.error');
+const errorEmail = document.querySelector('.errorEmail');
+const button = form.querySelector('button');
+console.log(error);
+
+button.addEventListener('click', (e) => {
+  e.preventDefault();
+  checkInput();
+})
+
+// make a function to check input
+function checkInput() {
+  const nameValue = name.value.trim();
+  const emailValue = email.value.trim();
+  const messageValue = message.value.trim();
+
+  if(nameValue === '') {
+    error[0].classList.add('error_active');
+  } else {
+    error[0].classList.remove('error_active');
+  }
+
+
+  if(emailValue === '') {
+    error[1].classList.add('error_active');
+  } else {
+    error[1].classList.remove('error_active');
+  }
+
+  // checking the correct email format\
+  if(emailValue !== '') {
+    const emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if(!emailFormat.test(emailValue)) {
+      errorEmail.classList.add('errorEmail_active');
+    } else {
+      errorEmail.classList.remove('errorEmail_active');
+    }
+  }
+
+  if(messageValue === '') {
+    error[2].classList.add('error_active');
+  } else {
+    error[2].classList.remove('error_active');
+  }
+
 }

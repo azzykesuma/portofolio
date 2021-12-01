@@ -106,8 +106,7 @@ header {
         top : 30%;
         text-align: center;
         background-color: #9E9C9C;
-        animation: fadein .5s ease-in-out;
-        animation-iteration-count: 1;
+        animation: fadein .5s 1;
         padding : 15px;
 
         h3 {
@@ -125,11 +124,9 @@ header {
     @keyframes fadein {
         from {
             transform: translateY(-100px);
-            opacity: 0;
         }
         to {
             transform: translateY(0px);
-            opacity: 1;
         }
     }
 
@@ -174,10 +171,16 @@ header {
     }
 }
 
+
 // recent work section
 .recentWork {
+    padding: $padding;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap : 10px;
     background-color : $secondBcgColor;
-    padding : $padding;
 
     h2 {
         text-align: center;
@@ -187,5 +190,118 @@ header {
         color: $bodyFontColor;
     }
 
+    .showCase {
+        width: 200px;
+        height: 100px;
+        background-color: lightcoral;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
+    a {
+        text-decoration: none;
+        color: $bodyFontColor;
+    }
+}
+// contact section
+.contact {
+    padding : $padding;
+    background-color: $firstBcgColor;
+
+    h2 {
+        text-align: center;
+        padding-top: 1em;
+        font-size : 1.5em;
+        margin-bottom: 1em;
+        color: $bodyFontColor;
+    }
+
+    h3 {
+        text-align: center;
+        font-size : 1em;
+        margin-bottom: 1em;
+        color: $bodyFontColor;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap : 10px;
+        margin-bottom: 1.5em;
+
+        .formWrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &:nth-of-type(3) {
+                align-items: flex-start;
+            }
+        }
+
+        input {
+            padding : 10px;
+            width : 70%;
+            font-size: $bodyFontSize;
+        }
+
+        button {
+            width : 10.71em;
+            padding : 10px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2em;
+            color : $headerFontColor;
+            margin-inline: auto;
+        }
+    }
+
+    .error,
+    .errorEmail
+    {
+        display: none;
+        color : red;
+    }
+    .error_active,
+    .errorEmail_active {
+        display: block;
+    }
+}
+
+footer {
+    background-color: $secondBcgColor;
+    padding: $padding;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .circle {
+        width : 30px;
+        height : 30px;
+        background-color: red;
+        border-radius: 50%;
+    }
+
+    h4 {
+        font-size: $bodyFontSize;
+        color : $bodyFontColor;
+        margin-top: 1.5em;
+    }
+
+    ul {
+        text-align: center;
+        margin-block : 1em;
+    }
+
+    li {
+        margin-bottom: .8em;
+    }
+
+
+    .socialMediaWrap {
+        display: flex;
+        gap: 10px;
+    }
 }

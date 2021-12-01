@@ -170,26 +170,34 @@
             <form action="">
                 <div class="formWrap">
                     <label for="name">Name</label>
-                    <input type="text" id="name" />
+                    <input type="text" id="name"
+                    placeholder="Enter your name..."
+                    />
                 </div>
+                <p class="error">Name cannot be empty</p>
                 <div class="formWrap">
                     <label for="email">Email</label>
-                    <input type="email" id="email" />
+                    <input type="email" id="email"
+                    placeholder="ex: name@yourname.com"
+                    />
                 </div>
+                <p class="error">Email cannot be empty</p>
+                <p class="errorEmail">Please enter a correct email format</p>
                 <div class="formWrap">
                     <label for="message">Message</label>
                     <textarea name="message" id="message" cols="20" rows="5"></textarea>
                 </div>
-                <button type="submit">Submiy</button>
+                <p class="error">Message cannot be empty</p>
+                <button type="submit">Submit</button>
             </form>
-            <h3>Or reach me here (nomor hp)</h3>
+            <h3>Or reach me here : +62 85866195626</h3>
         </section>
     </main>
     <footer>
-        <div class="circle">img</div>
-        <h4>Some motivational quotes</h4>
+        <div class="circle"></div>
+        <h4>"Some motivational quotes"</h4>
         <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="./index.html">Home</a></li>
             <li><a href="#">Portofolio</a></li>
             <li><a href="#">Contact Me</a></li>
         </ul>

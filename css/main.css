@@ -62,6 +62,10 @@ body {
   overflow-x: hidden;
 }
 
+a {
+  text-decoration: none;
+}
+
 .slideshow-container {
   max-width: 1000px;
   position: relative;
@@ -336,10 +340,8 @@ header .hamburger .line {
   top: 30%;
   text-align: center;
   background-color: #9E9C9C;
-  -webkit-animation: fadein 0.5s ease-in-out;
-          animation: fadein 0.5s ease-in-out;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
+  -webkit-animation: fadein 0.5s 1;
+          animation: fadein 0.5s 1;
   padding: 15px;
 }
 .work .workDescription h3 {
@@ -354,24 +356,20 @@ header .hamburger .line {
   from {
     -webkit-transform: translateY(-100px);
             transform: translateY(-100px);
-    opacity: 0;
   }
   to {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
-    opacity: 1;
   }
 }
 @keyframes fadein {
   from {
     -webkit-transform: translateY(-100px);
             transform: translateY(-100px);
-    opacity: 0;
   }
   to {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
-    opacity: 1;
   }
 }
 .work .work_active {
@@ -452,8 +450,22 @@ header .hamburger .line {
 }
 
 .recentWork {
-  background-color: #E4E5F1;
   padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  background-color: #E4E5F1;
 }
 .recentWork h2 {
   text-align: center;
@@ -461,4 +473,130 @@ header .hamburger .line {
   font-size: 1.5em;
   margin-bottom: 1em;
   color: #102542;
+}
+.recentWork .showCase {
+  width: 200px;
+  height: 100px;
+  background-color: lightcoral;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.recentWork a {
+  text-decoration: none;
+  color: #102542;
+}
+
+.contact {
+  padding: 10px;
+  background-color: #FAFAFA;
+}
+.contact h2 {
+  text-align: center;
+  padding-top: 1em;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  color: #102542;
+}
+.contact h3 {
+  text-align: center;
+  font-size: 1em;
+  margin-bottom: 1em;
+  color: #102542;
+}
+.contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  margin-bottom: 1.5em;
+}
+.contact form .formWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.contact form .formWrap:nth-of-type(3) {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.contact form input {
+  padding: 10px;
+  width: 70%;
+  font-size: 1em;
+}
+.contact form button {
+  width: 10.71em;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2em;
+  color: #484B6A;
+  margin-inline: auto;
+}
+.contact .error,
+.contact .errorEmail {
+  display: none;
+  color: red;
+}
+.contact .error_active,
+.contact .errorEmail_active {
+  display: block;
+}
+
+footer {
+  background-color: #E4E5F1;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer .circle {
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border-radius: 50%;
+}
+footer h4 {
+  font-size: 1em;
+  color: #102542;
+  margin-top: 1.5em;
+}
+footer ul {
+  text-align: center;
+  margin-block: 1em;
+}
+footer li {
+  margin-bottom: 0.8em;
+}
+footer .socialMediaWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
 }
