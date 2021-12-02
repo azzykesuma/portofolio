@@ -1,3 +1,22 @@
+// hamburger animation
+const hamburger = document.querySelector('.hamburger');
+hamburger.addEventListener('click', clickHamburger);
+
+function clickHamburger() {
+  const activeElements = document.querySelectorAll('.active-elements');
+  const sidenavContainer = document.querySelector('.sidenavContainer');
+
+  for(let i = 0; i < activeElements.length; i++) {
+    activeElements[i].classList.toggle('active');
+  }
+  if(activeElements[1].classList.contains('active')) {
+    sidenavContainer.classList.add('active_nav');
+  } else {
+    sidenavContainer.classList.remove('active_nav');
+  }
+}
+  
+
 var slideIndex = 1;
 showSlides(slideIndex);
 

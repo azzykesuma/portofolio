@@ -245,6 +245,7 @@ input:checked + .slider:before {
 
 header {
   background-color: #FAFAFA;
+  position: relative;
 }
 header .mobileNav {
   display: -webkit-box;
@@ -271,11 +272,29 @@ header .toggleWrap p {
   font-size: 0.7em;
   margin-top: 0.5em;
 }
-header .hamburger .line {
+header .hamburger .one,
+header .hamburger .two,
+header .hamburger .three {
   width: 30px;
   height: 3px;
   background-color: #000;
   margin: 5px 0;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+header .hamburger .one.active {
+  -webkit-transform: translate(-20px, 7px) rotate(45deg);
+          transform: translate(-20px, 7px) rotate(45deg);
+}
+header .hamburger .two.active {
+  -webkit-transform: translateX(1000px);
+          transform: translateX(1000px);
+  opacity: 0;
+}
+header .hamburger .three.active {
+  -webkit-transform: translate(-20px, -10px) rotate(-45deg);
+          transform: translate(-20px, -10px) rotate(-45deg);
 }
 
 .tabletNav {
@@ -285,6 +304,58 @@ header .hamburger .line {
 .sidenavContainer,
 .projectContainer {
   display: none;
+}
+
+.sidenavContainer.active_nav {
+  display: block;
+  background-color: #21D19F;
+  width: 300px;
+  height: 100vh;
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  padding: 10px;
+}
+.sidenavContainer.active_nav .cross {
+  position: relative;
+  right: -90%;
+}
+.sidenavContainer.active_nav .cross .line {
+  width: 20px;
+  height: 3px;
+  background-color: #000;
+  margin: 5px 0;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+.sidenavContainer.active_nav .cross .line:nth-of-type(1) {
+  -webkit-transform: rotate(40deg) translateY(5px);
+          transform: rotate(40deg) translateY(5px);
+}
+.sidenavContainer.active_nav .cross .line:nth-of-type(2) {
+  -webkit-transform: rotate(-40deg) translateY(-5px);
+          transform: rotate(-40deg) translateY(-5px);
+}
+.sidenavContainer.active_nav li {
+  margin-bottom: 10px;
+}
+.sidenavContainer.active_nav li a {
+  font-size: 1.2em;
+}
+.sidenavContainer.active_nav li ion-icon {
+  font-size: 1.5em;
+}
+.sidenavContainer.active_nav li div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .intro {
