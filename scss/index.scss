@@ -59,47 +59,38 @@ header {
     display: none;
 }
 
-.sidenavContainer,
-.projectContainer {
-    display: none;
+
+
+.sidenavContainer {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: $secondBcgColor;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 20px;
 }
 
 .sidenavContainer.active_nav {
-    display: block;
-    background-color: #21D19F;
-    width: 300px;
     height : 100vh;
-    position: absolute;
-    z-index: 2;
-    right : 0;
-    padding : $padding;
 
-    .cross {
-        position: relative;
-        right : -90%;
-
-        .line {
-            width: 20px;
-            height: 3px;
-            background-color: #000;
-            margin: 5px 0;
-            cursor: pointer;
-            transition: .5s ease-in-out;
-
-            &:nth-of-type(1) {
-                transform: rotate(40deg) translateY(5px);
-            }
-            &:nth-of-type(2) {
-                transform: rotate(-40deg) translateY(-5px);
-            }
-        }
-
+    .navList {
+        padding : $padding;
     }
+
     li {
-        margin-bottom: 10px;
+        margin-bottom: 1.5em;
+        margin-left: -10px;
+        padding : $padding;
+        transition: .3s ease-in-out;
 
         a {
-            font-size: 1.2em;
+            font-size: 1.4em;
+            transition: .3s ease-in-out;
+            color : #200116;
         }
 
         ion-icon {
@@ -110,6 +101,67 @@ header {
             display: flex;
             align-items: center;
             justify-content: space-between;
+        }
+
+        &:hover {
+            background-color: #1A535C;
+
+            a {
+                color : #B5FFE1;
+            }
+        }
+    }
+}
+
+.projectContainer {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #7C898B;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 20px;
+
+    .projectContainer.active_nav {
+        height : 100%;
+    }
+
+    .projects {
+        padding : $padding;
+
+        li {
+            margin-bottom: 1.5em;
+            margin-left: -10px;
+            padding : $padding;
+            transition: .3s ease-in-out;
+    
+            a {
+                font-size: 1.4em;
+                transition: .3s ease-in-out;
+                color : #EDFFEC;
+            }
+    
+            ion-icon {
+                font-size: 1.5em;
+                color : #EDFFEC;
+            }
+    
+            div {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+    
+            &:hover {
+                background-color: #5E4955;
+    
+                a {
+                    color : #B5FFE1;
+                }
+            }
         }
     }
 }
@@ -131,6 +183,22 @@ header {
     h2 {
         font-size : 1.5em;
         margin-bottom: 1em;
+        display: inline-block;
+    }
+
+    #blink {
+        display: inline-block;
+        vertical-align: middle;
+        width: 2px;
+        height: 20px;
+        background-color: black;
+        animation: blinker .8s linear infinite;
+    }
+
+    @keyframes blinker {
+        50% {
+            opacity: 0;
+        }
     }
 }
 // work section

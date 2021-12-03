@@ -243,6 +243,28 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+.cross {
+  position: relative;
+  right: -90%;
+}
+.cross .line {
+  width: 20px;
+  height: 3px;
+  background-color: #000;
+  margin: 5px 0;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+.cross .line:nth-of-type(1) {
+  -webkit-transform: rotate(40deg) translateY(5px);
+          transform: rotate(40deg) translateY(5px);
+}
+.cross .line:nth-of-type(2) {
+  -webkit-transform: rotate(-40deg) translateY(-5px);
+          transform: rotate(-40deg) translateY(-5px);
+}
+
 header {
   background-color: #FAFAFA;
   position: relative;
@@ -301,47 +323,38 @@ header .hamburger .three.active {
   display: none;
 }
 
-.sidenavContainer,
-.projectContainer {
-  display: none;
+.sidenavContainer {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #E4E5F1;
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding-top: 20px;
 }
 
 .sidenavContainer.active_nav {
-  display: block;
-  background-color: #21D19F;
-  width: 300px;
   height: 100vh;
-  position: absolute;
-  z-index: 2;
-  right: 0;
+}
+.sidenavContainer.active_nav .navList {
   padding: 10px;
 }
-.sidenavContainer.active_nav .cross {
-  position: relative;
-  right: -90%;
-}
-.sidenavContainer.active_nav .cross .line {
-  width: 20px;
-  height: 3px;
-  background-color: #000;
-  margin: 5px 0;
-  cursor: pointer;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-}
-.sidenavContainer.active_nav .cross .line:nth-of-type(1) {
-  -webkit-transform: rotate(40deg) translateY(5px);
-          transform: rotate(40deg) translateY(5px);
-}
-.sidenavContainer.active_nav .cross .line:nth-of-type(2) {
-  -webkit-transform: rotate(-40deg) translateY(-5px);
-          transform: rotate(-40deg) translateY(-5px);
-}
 .sidenavContainer.active_nav li {
-  margin-bottom: 10px;
+  margin-bottom: 1.5em;
+  margin-left: -10px;
+  padding: 10px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 .sidenavContainer.active_nav li a {
-  font-size: 1.2em;
+  font-size: 1.4em;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  color: #200116;
 }
 .sidenavContainer.active_nav li ion-icon {
   font-size: 1.5em;
@@ -357,6 +370,66 @@ header .hamburger .three.active {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.sidenavContainer.active_nav li:hover {
+  background-color: #1A535C;
+}
+.sidenavContainer.active_nav li:hover a {
+  color: #B5FFE1;
+}
+
+.projectContainer {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #7C898B;
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding-top: 20px;
+}
+.projectContainer .projectContainer.active_nav {
+  height: 100%;
+}
+.projectContainer .projects {
+  padding: 10px;
+}
+.projectContainer .projects li {
+  margin-bottom: 1.5em;
+  margin-left: -10px;
+  padding: 10px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.projectContainer .projects li a {
+  font-size: 1.4em;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  color: #EDFFEC;
+}
+.projectContainer .projects li ion-icon {
+  font-size: 1.5em;
+  color: #EDFFEC;
+}
+.projectContainer .projects li div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.projectContainer .projects li:hover {
+  background-color: #5E4955;
+}
+.projectContainer .projects li:hover a {
+  color: #B5FFE1;
+}
 
 .intro {
   background-color: #FAFAFA;
@@ -371,6 +444,26 @@ header .hamburger .three.active {
 .intro h2 {
   font-size: 1.5em;
   margin-bottom: 1em;
+  display: inline-block;
+}
+.intro #blink {
+  display: inline-block;
+  vertical-align: middle;
+  width: 2px;
+  height: 20px;
+  background-color: black;
+  -webkit-animation: blinker 0.8s linear infinite;
+          animation: blinker 0.8s linear infinite;
+}
+@-webkit-keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
 
 .work {

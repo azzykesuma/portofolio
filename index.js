@@ -1,18 +1,66 @@
 // hamburger animation
 const hamburger = document.querySelector('.hamburger');
 hamburger.addEventListener('click', clickHamburger);
+const sidenavContainer = document.querySelector('.sidenavContainer');
 
 function clickHamburger() {
   const activeElements = document.querySelectorAll('.active-elements');
-  const sidenavContainer = document.querySelector('.sidenavContainer');
 
   for(let i = 0; i < activeElements.length; i++) {
     activeElements[i].classList.toggle('active');
   }
   if(activeElements[1].classList.contains('active')) {
     sidenavContainer.classList.add('active_nav');
+    sidenavContainer.style.width = '300px';
   } else {
     sidenavContainer.classList.remove('active_nav');
+    sidenavContainer.style.width = '0px'
+  }
+}
+
+const cross = document.querySelector('.cross');
+cross.addEventListener('click', close);
+
+function close() {
+  const activeElements = document.querySelectorAll('.active-elements');
+  for(let i = 0; i < activeElements.length; i++) {
+    activeElements[i].classList.toggle('active');
+  }
+  sidenavContainer.classList.remove('active_nav');
+  sidenavContainer.style.width = '0px'
+}
+
+const projectNav = document.getElementById('projectNav');
+const projectContainer = document.querySelector('.projectContainer');
+
+function closeProject() {
+  projectContainer.classList.remove('active_nav');
+  projectContainer.style.width = '0px';
+}
+
+// project nav sidebar
+projectNav.addEventListener('click', function(e) {
+  projectContainer.classList.add('active_nav')
+  projectContainer.style.width = '300px';
+});
+
+// typewriter effect
+
+let i = 0;
+let text = [
+  'I am Azzy',
+  'I am a web developer',
+]
+let speed = 50;
+
+window.addEventListener('load', typeWriter())
+
+function typeWriter() {
+  if (i < text[0].length) {
+    let name = document.getElementById('name');
+    name.innerHTML += text[0].charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
   }
 }
   

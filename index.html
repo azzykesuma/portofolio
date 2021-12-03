@@ -39,14 +39,14 @@
         </div>
         <!-- sideNav -->
         <div class="sidenavContainer">
-            <div class="cross">
+            <div class="cross" onclick="close()">
                 <div class="line"></div>
                 <div class="line"></div>
             </div>
             <ul class="navList">
                 <li><a href="#">Home</a></li>
                 <li>
-                    <div>
+                    <div id="projectNav">
                         <a href="#">Portofolio</a>
                         <ion-icon name="chevron-forward-outline"></ion-icon>
                     </div>
@@ -55,7 +55,7 @@
             </ul>
         </div>
         <div class="projectContainer">
-            <div class="cross">
+            <div class="cross" onclick="closeProject()">
                 <div class="line"></div>
                 <div class="line"></div>
             </div>
@@ -103,7 +103,7 @@
         <section class="intro">
             <h1>Hello World!</h1>
             <!-- toggle between name and frontend web dev -->
-            <h2>I Am Azzy</h2>
+            <h2 id="name"></h2><div id="blink"></div>
             <p>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
                 Beatae ratione non placeat maxime accusantium alias porro exercitationem totam amet similique,
