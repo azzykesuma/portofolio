@@ -47,23 +47,53 @@ projectNav.addEventListener('click', function(e) {
 // typewriter effect
 
 let i = 0;
+let i_Index = 0;
+let interval_val;
+let name = document.getElementById('name');
+let blink = document.getElementById('blink')
 let text = [
   'I am Azzy',
   'I am a web developer',
 ]
-let speed = 50;
 
-window.addEventListener('load', typeWriter())
+function typewriter() {
+  let textPart = text[i].substring(0, i_Index + 1);
+  name.innerHTML = textPart;
+  i_Index++;
+  
+  if(textPart === text[i]) {
+    // blink.style.display = 'none'
+    clearInterval(interval_val);
+    setTimeout(function() {
+      interval_val = setInterval(Delete, 50);
+    },1000)
+  } 
+}
 
-function typeWriter() {
-  if (i < text[0].length) {
-    let name = document.getElementById('name');
-    name.innerHTML += text[0].charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
+function Delete() {
+  let textPart = text[i].substring(0, i_Index - 1);
+  name.innerHTML = textPart;
+  i_Index--;
+
+  if(textPart === '') {
+    clearInterval(interval_val);
+    if(i === text.length - 1) {
+      i = 0;
+    } else {
+      i++;
+      i_Index = 0;
+    }
+
+    setTimeout(function() {
+      blink.style.display = 'inline-block';
+      interval_val = setInterval(typewriter, 50);
+    },1000)
   }
 }
-  
+
+interval_val = setInterval(typewriter, 100);
+
+// slideshow effect
 
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -95,24 +125,35 @@ function showSlides(n) {
 }
 // hover state in work section
 const webDev = document.getElementById('web-development');
-const workDescription = document.querySelector('.workDescription');
+const workDescription = document.querySelectorAll('.workDescription');
+const upgrade = document.getElementById('upgrade');
 console.log(workDescription);
 // make hover function
 webDev.addEventListener('mouseover', mouse_enter);
 webDev.addEventListener('mouseout', mouse_leave);
+upgrade.addEventListener('mouseover',mouse_enter);
+upgrade.addEventListener('mouseout',mouse_leave);
 
-function mouse_enter() {
-  // webDev.style.opacity = '.6';
-  workDescription.classList.add('work_active')
+function mouse_enter(e) {
+  const target = e.target;
+  if( target.id === 'web-development') {
+    workDescription[0].classList.add('work_active')
+  } else {
+    workDescription[1].classList.add('work_active')
+  }
 }
-function mouse_leave() {
-  // webDev.style.opacity = '1';
-  workDescription.classList.remove('work_active')
+function mouse_leave(e) {
+  const target = e.target;
+  if( target.id === 'web-development') {
+    workDescription[0].classList.remove('work_active')
+  } else {
+    workDescription[1].classList.remove('work_active')
+  }
 }
 
 // form validation
 const form = document.querySelector('form');
-const name = document.getElementById('name');
+const name_val = document.getElementById('nameVal');
 const email = document.getElementById('email');
 const message = document.getElementById('message');
 const error = document.querySelectorAll('.error');
@@ -127,7 +168,7 @@ button.addEventListener('click', (e) => {
 
 // make a function to check input
 function checkInput() {
-  const nameValue = name.value.trim();
+  const nameValue = name_val.value.trim();
   const emailValue = email.value.trim();
   const messageValue = message.value.trim();
 

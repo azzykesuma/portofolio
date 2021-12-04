@@ -1,6 +1,7 @@
 @import './variable.scss';
 @import './root.scss';
 @import './utility.scss';
+@import './mixin.scss';
 
 header {
     background-color: $firstBcgColor;
@@ -26,6 +27,17 @@ header {
         p {
             font-size: .7em;
             margin-top : .5em;
+
+            @include mQ($tablet) {
+                font-size: .9em;
+                margin-top: 0;
+            }
+        }
+
+        @include mQ($tablet) {
+            display: flex;
+            align-items: center;
+            gap : 10px;
         }
     }
 
@@ -52,11 +64,20 @@ header {
         .three.active {
             transform: translate(-20px,-10px) rotate(-45deg);
         }
+
+        @include mQ($tablet) {
+            display: none;
+        }
     }
 }
 
 .tabletNav {
     display: none;
+
+    @include mQ($tablet) {
+        display: flex;
+        gap : 10px;
+    }
 }
 
 
@@ -170,20 +191,27 @@ header {
 .intro {
     background-color: $firstBcgColor;
     padding: 2em $padding;
-    // background-image: url('../asset/4853433.jpg');
-    // background-size: cover;
+    position: relative;
 
     h1 {
         font-size : $headerFontSize;
         font-family: $headerFont;
         color : $headerFontColor;
         margin-bottom: .5em;
+
+        @include mQ($tablet) {
+            font-size: 5vw;
+        }
     }
 
     h2 {
         font-size : 1.5em;
-        margin-bottom: 1em;
         display: inline-block;
+        position: absolute;
+    } 
+
+    p {
+        margin-top : 4em;
     }
 
     #blink {
@@ -205,6 +233,8 @@ header {
 .work {
     background-color: $secondBcgColor;
     padding : $padding;
+    z-index: 1;
+    height : 30em;
 
     h2 {
         text-align: center;
@@ -219,31 +249,33 @@ header {
         position: relative;
 
         img {
+            background-color: $secondBcgColor;
             border-radius: 20px;
-            width: 100%;
-            height: 300px;
+            min-width: 100%;
+            width : 14.5em;
+            height: 200px;
             object-fit: cover;
             transition: .5s ease-out;
             filter: brightness(100%);
-
-            &:hover {
-                opacity: .5;
-                filter: brightness(50%);
-            }
+            position: relative;
+            z-index: 3;
         }
     }
 
     .workDescription {
-        display: none;
-        position: absolute;
+  
+        border-radius: 20px;
+        position : relative;
+        bottom : 2em;
         color : $bodyFontColor;
-        top : 30%;
         text-align: center;
         background-color: #9E9C9C;
-        animation: fadein .5s 1;
+        transform: translateY(-140px);
+        transition : .5s ease-out;
         padding : 15px;
 
         h3 {
+            margin-top: 1em;
             font-size: 1.4em;
             color : $headerFontColor;
             margin-bottom: .5em;
@@ -255,17 +287,8 @@ header {
        
     }
 
-    @keyframes fadein {
-        from {
-            transform: translateY(-100px);
-        }
-        to {
-            transform: translateY(0px);
-        }
-    }
-
     .work_active {
-        display: block;
+        transform: translateY(-5px);
     }
 
     .tabletMode {

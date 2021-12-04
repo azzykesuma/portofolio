@@ -103,7 +103,7 @@
         <section class="intro">
             <h1>Hello World!</h1>
             <!-- toggle between name and frontend web dev -->
-            <h2 id="name"></h2><div id="blink"></div>
+            <h2 id="name"><div id="blink"></div></h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
                 Beatae ratione non placeat maxime accusantium alias porro exercitationem totam amet similique,
@@ -124,7 +124,11 @@
                 </div>
               
                 <div class="mySlides slide card">
-                  <img src="./asset/work.png" alt="">
+                  <img src="./asset/work.png" alt="" id="upgrade">
+                  <div class="workDescription">
+                    <h3>Skill Upgrade in process</h3>
+                    <p>Please wait</p>
+                </div>
                 </div>
               
               
@@ -162,7 +166,7 @@
             <form action="">
                 <div class="formWrap">
                     <label for="name">Name</label>
-                    <input type="text" id="name"
+                    <input type="text" id="nameVal"
                     placeholder="Enter your name..."
                     />
                 </div>
