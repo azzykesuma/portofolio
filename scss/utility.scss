@@ -1,10 +1,42 @@
+@import './mixin.scss';
+.tabletMode {
+  display: none;
+
+  @include mQ($tablet) {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+.card {
+
+  position: relative;
+
+  img {
+      background-color: $secondBcgColor;
+      border-radius: 20px;
+      width : 300px;
+      height: 200px;
+      object-fit: cover;
+      transition: .5s ease-out;
+      filter: brightness(100%);
+      position: relative;
+      z-index: 3;
+  }
+}
+
 .slideshow-container {
     max-width: 1000px;
     position: relative;
     margin: auto;
     display: flex;
     justify-content: center;
+
+    @include mQ($tablet) {
+      display : none;
+    }
   }
+
   
   /* Hide the images by default */
   .mySlides {
@@ -25,6 +57,7 @@
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
+    z-index: 4;
   }
   
   /* Position the "next button" to the right */

@@ -66,6 +66,38 @@ a {
   text-decoration: none;
 }
 
+.tabletMode {
+  display: none;
+}
+@media (min-width: 768px) {
+  .tabletMode {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+.card {
+  position: relative;
+}
+.card img {
+  background-color: #E4E5F1;
+  border-radius: 20px;
+  width: 300px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+  position: relative;
+  z-index: 3;
+}
+
 .slideshow-container {
   max-width: 1000px;
   position: relative;
@@ -76,6 +108,11 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+@media (min-width: 768px) {
+  .slideshow-container {
+    display: none;
+  }
 }
 
 /* Hide the images by default */
@@ -101,6 +138,7 @@ a {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  z-index: 4;
 }
 
 /* Position the "next button" to the right */
@@ -352,12 +390,17 @@ header .hamburger .three.active {
     gap: 10px;
   }
 }
+@media (min-width: 64.9em) {
+  .tabletNav a {
+    font-size: 1.5em;
+  }
+}
 
 .sidenavContainer {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 5;
   top: 0;
   right: 0;
   background-color: #E4E5F1;
@@ -411,7 +454,7 @@ header .hamburger .three.active {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 6;
   top: 0;
   right: 0;
   background-color: #7C898B;
@@ -482,8 +525,20 @@ header .hamburger .three.active {
   display: inline-block;
   position: absolute;
 }
+@media (min-width: 64.9em) {
+  .intro h2 {
+    font-size: 1.8em;
+  }
+}
 .intro p {
   margin-top: 4em;
+}
+@media (min-width: 64.9em) {
+  .intro p {
+    font-size: 1.3em;
+    line-height: 1.5em;
+    max-width: 80ch;
+  }
 }
 .intro #blink {
   display: inline-block;
@@ -507,7 +562,7 @@ header .hamburger .three.active {
 
 .work {
   background-color: #E4E5F1;
-  padding: 10px;
+  padding: 2em;
   z-index: 1;
   height: 30em;
 }
@@ -518,24 +573,10 @@ header .hamburger .three.active {
   margin-bottom: 1em;
   color: #102542;
 }
-.work .card {
-  width: 200px;
-  position: relative;
-}
-.work .card img {
-  background-color: #E4E5F1;
-  border-radius: 20px;
-  min-width: 100%;
-  width: 14.5em;
-  height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -webkit-transition: 0.5s ease-out;
-  transition: 0.5s ease-out;
-  -webkit-filter: brightness(100%);
-          filter: brightness(100%);
-  position: relative;
-  z-index: 3;
+@media (min-width: 768px) {
+  .work h2 {
+    font-size: 2em;
+  }
 }
 .work .workDescription {
   border-radius: 20px;
@@ -549,6 +590,7 @@ header .hamburger .three.active {
   -webkit-transition: 0.5s ease-out;
   transition: 0.5s ease-out;
   padding: 15px;
+  width: 300px;
 }
 .work .workDescription h3 {
   margin-top: 1em;
@@ -563,9 +605,6 @@ header .hamburger .three.active {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
 }
-.work .tabletMode {
-  display: none;
-}
 
 .tools {
   background-color: #FAFAFA;
@@ -577,6 +616,11 @@ header .hamburger .three.active {
   font-size: 1.5em;
   margin-bottom: 1em;
   color: #102542;
+}
+@media (min-width: 768px) {
+  .tools h2 {
+    font-size: 2em;
+  }
 }
 .tools .toolsWrap {
   display: -ms-grid;
@@ -636,6 +680,12 @@ header .hamburger .three.active {
           align-items: center;
   color: white;
 }
+@media (min-width: 768px) {
+  .tools .toolsWrap div {
+    width: 100px;
+    height: 100px;
+  }
+}
 
 .recentWork {
   padding: 10px;
@@ -662,6 +712,11 @@ header .hamburger .three.active {
   margin-bottom: 1em;
   color: #102542;
 }
+@media (min-width: 768px) {
+  .recentWork h2 {
+    font-size: 2em;
+  }
+}
 .recentWork .showCase {
   width: 200px;
   height: 100px;
@@ -680,6 +735,34 @@ header .hamburger .three.active {
 .recentWork a {
   text-decoration: none;
   color: #102542;
+}
+.recentWork .showCaseWrap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+@media (min-width: 768px) {
+  .recentWork .showCaseWrap {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
 }
 
 .contact {
@@ -726,7 +809,7 @@ header .hamburger .three.active {
       -ms-flex-align: start;
           align-items: flex-start;
 }
-.contact form input {
+.contact form input, .contact form textarea {
   padding: 10px;
   width: 70%;
   font-size: 1em;
@@ -778,6 +861,14 @@ footer h4 {
 footer ul {
   text-align: center;
   margin-block: 1em;
+}
+@media (min-width: 64.9em) {
+  footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 10px;
+  }
 }
 footer li {
   margin-bottom: 0.8em;

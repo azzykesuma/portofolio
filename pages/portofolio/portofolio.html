@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link rel="stylesheet" href="../../css/main.css" class="rel">
     <title>My Portofolio</title>
 </head>
 <body>
@@ -12,47 +19,42 @@
         <div class="mobileNav">
             <div class="circle"></div>
             <div class="toggleWrap">
-                <div class="toggle"></div>
-                <p>Light Mode</p>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                <p class="mode">Light Mode</p>
             </div>
             <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
+                <div class="one active-elements"></div>
+                <div class="two active-elements"></div>
+                <div class="three active-elements"></div>
             </div>
             <ul class="tabletNav">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Portofolio</a></li>
-                <li><a href="#">Contact Me</a></li>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="./pages/portofolio/portofolio.html">Portofolio</a></li>
+                <li><a href="./pages/contact/contact.html">Contact Me</a></li>
             </ul>
         </div>
         <!-- sideNav -->
         <div class="sidenavContainer">
-            <div class="cross">
+            <div class="cross" onclick="close()">
                 <div class="line"></div>
                 <div class="line"></div>
             </div>
             <ul class="navList">
+                <li><a href="#">Home</a></li>
                 <li>
-                    <div>
-                        <a href="#">Home</a>
-                    </div>
-                </li>
-                <li>
-                    <div>
+                    <div id="projectNav">
                         <a href="#">Portofolio</a>
                         <ion-icon name="chevron-forward-outline"></ion-icon>
                     </div>
                 </li>
-                <li>
-                    <div>
-                        <a href="#">Contact Me</a>
-                    </div>
-                </li>
+                <li> <a href="#">Contact me</a></li>
             </ul>
         </div>
         <div class="projectContainer">
-            <div class="cross">
+            <div class="cross" onclick="closeProject()">
                 <div class="line"></div>
                 <div class="line"></div>
             </div>

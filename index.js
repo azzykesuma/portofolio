@@ -1,3 +1,22 @@
+// toggling mode
+const toggleMode = document.querySelector('.switch');
+const switchMode = toggleMode.getElementsByTagName('input');
+const mode = document.querySelectorAll('.mode');
+// checking the toggle is checked
+for (let i = 0; i < switchMode.length; i++) {
+  switchMode[i].addEventListener('click', checkToggle);
+}
+function checkToggle() {
+  for(let i = 0; i < mode.length; i++) {
+    if (switchMode[i].checked) {
+      mode[i].innerHTML = 'Dark Mode';
+    } else {
+      mode[i].innerHTML = 'Light Mode';
+    }
+  }
+}
+
+
 // hamburger animation
 const hamburger = document.querySelector('.hamburger');
 hamburger.addEventListener('click', clickHamburger);
@@ -128,7 +147,6 @@ const webDev = document.getElementById('web-development');
 const workDescription = document.querySelectorAll('.workDescription');
 const upgrade = document.getElementById('upgrade');
 console.log(workDescription);
-// make hover function
 webDev.addEventListener('mouseover', mouse_enter);
 webDev.addEventListener('mouseout', mouse_leave);
 upgrade.addEventListener('mouseover',mouse_enter);
@@ -136,18 +154,48 @@ upgrade.addEventListener('mouseout',mouse_leave);
 
 function mouse_enter(e) {
   const target = e.target;
-  if( target.id === 'web-development') {
-    workDescription[0].classList.add('work_active')
-  } else {
-    workDescription[1].classList.add('work_active')
-  }
+    if( target.id === 'web-development') {
+      workDescription[0].classList.add('work_active')
+    }
+    else {
+      workDescription[1].classList.add('work_active')
+    }
 }
 function mouse_leave(e) {
   const target = e.target;
   if( target.id === 'web-development') {
     workDescription[0].classList.remove('work_active')
-  } else {
+  }
+  else {
     workDescription[1].classList.remove('work_active')
+  }
+}
+
+// hover state in tablet and desktop
+const webDev_tablet = document.getElementById('web-development-tablet');
+const upgrade_tablet = document.getElementById('upgrade-tablet');
+
+webDev_tablet.addEventListener('mouseover', mouse_enter_tablet);
+webDev_tablet.addEventListener('mouseout', mouse_leave_tablet);
+upgrade_tablet.addEventListener('mouseover',mouse_enter_tablet);
+upgrade_tablet.addEventListener('mouseout',mouse_leave_tablet);
+
+function mouse_enter_tablet(e) {
+  const target = e.target;
+    if( target.id === webDev_tablet.id) {
+      workDescription[2].classList.add('work_active')
+    }
+    else {
+      workDescription[3].classList.add('work_active')
+    }
+}
+function mouse_leave_tablet(e) {
+  const target = e.target;
+  if( target.id === webDev_tablet.id) {
+    workDescription[2].classList.remove('work_active')
+  }
+  else {
+    workDescription[3].classList.remove('work_active')
   }
 }
 
