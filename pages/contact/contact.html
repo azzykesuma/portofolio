@@ -4,102 +4,116 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link rel="stylesheet" href="../../css/contact.css" class="rel">
+    <link rel="stylesheet" href="../../css/main.css" class="rel">
     <title>Contact Me</title>
 </head>
 <body>
-    <div class="mobileNav">
-        <div class="circle"></div>
-        <div class="toggleWrap">
-            <div class="toggle"></div>
-            <p>Light Mode</p>
+    <header>
+        <div class="mobileNav">
+            <div class="circle"></div>
+            <div class="toggleWrap">
+                <div class="toggle">
+                    <label class="switch">
+                        <input type="checkbox" id='togglePort'>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <p>Light Mode</p>
+            </div>
+            <div class="hamburger">
+                <div class="one active-elements"></div>
+                <div class="two active-elements"></div>
+                <div class="three active-elements"></div>
+            </div>
+            <ul class="tabletNav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Portofolio</a></li>
+                <li><a href="#">Contact Me</a></li>
+            </ul>
         </div>
-        <div class="hamburger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
+        <!-- sideNav -->
+        <div class="sidenavContainer">
+            <div class="cross">
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="navList">
+                <li>
+                    <div>
+                        <a href="#">Home</a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a href="#">Portofolio</a>
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a href="#">Contact Me</a>
+                    </div>
+                </li>
+            </ul>
         </div>
-        <ul class="tabletNav">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Portofolio</a></li>
-            <li><a href="#">Contact Me</a></li>
-        </ul>
-    </div>
-    <!-- sideNav -->
-    <div class="sidenavContainer">
-        <div class="cross">
-            <div class="line"></div>
-            <div class="line"></div>
+        <div class="projectContainer">
+            <div class="cross">
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="projects">
+                <li>
+                    <div>
+                        <a href="#">Project 1</a>
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a href="#">Project 2</a>
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a href="#">Project 3</a>
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a href="#">Project 4</a>
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a href="#">Project 5</a>
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a href="#">Project 6</a>
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </div>
+                </li>
+            </ul>
         </div>
-        <ul class="navList">
-            <li>
-                <div>
-                    <a href="#">Home</a>
-                </div>
-            </li>
-            <li>
-                <div>
-                    <a href="#">Portofolio</a>
-                    <ion-icon name="chevron-forward-outline"></ion-icon>
-                </div>
-            </li>
-            <li>
-                <div>
-                    <a href="#">Contact Me</a>
-                </div>
-            </li>
-        </ul>
-    </div>
-    <div class="projectContainer">
-        <div class="cross">
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
-        <ul class="projects">
-            <li>
-                <div>
-                    <a href="#">Project 1</a>
-                    <ion-icon name="chevron-forward-outline"></ion-icon>
-                </div>
-            </li>
-            <li>
-                <div>
-                    <a href="#">Project 2</a>
-                    <ion-icon name="chevron-forward-outline"></ion-icon>
-                </div>
-            </li>
-            <li>
-                <div>
-                    <a href="#">Project 3</a>
-                    <ion-icon name="chevron-forward-outline"></ion-icon>
-                </div>
-            </li>
-            <li>
-                <div>
-                    <a href="#">Project 4</a>
-                    <ion-icon name="chevron-forward-outline"></ion-icon>
-                </div>
-            </li>
-            <li>
-                <div>
-                    <a href="#">Project 5</a>
-                    <ion-icon name="chevron-forward-outline"></ion-icon>
-                </div>
-            </li>
-            <li>
-                <div>
-                    <a href="#">Project 6</a>
-                    <ion-icon name="chevron-forward-outline"></ion-icon>
-                </div>
-            </li>
-        </ul>
-    </div>
-</header>
+    </header>
 <main>
     <div class="top_part">
         <h1>Contact me</h1>
     </div>
     <div class="bottom_part">
-
         <form action="">
             <div class="formWrap">
                 <label for="name">Name</label>

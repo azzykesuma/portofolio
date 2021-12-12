@@ -1,3 +1,60 @@
+@import '../../scss/mixin.scss';
+@import '../../scss/variable.scss';
+@import '../../scss/utility.scss';
+
 * {
     padding : 0;
+}
+.top_part {
+    text-align: center;
+    padding : 2em;
+    background-color: #6BAB90;
+
+    h1 {
+        font-size : $headerFontSize;
+        font-family: $headerFont;
+        color : $headerFontColor;
+
+        @include mQ($tablet) {
+            font-size: 5vw;
+        }
+    }
+}
+
+.bottom_part {
+    background-color: #6BAB90;
+    padding : $padding;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap : 10px;
+        margin-bottom: 1.5em;
+
+        .formWrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &:nth-of-type(3) {
+                align-items: flex-start;
+            }
+        }
+
+        input,textarea {
+            padding : 10px;
+            width : 70%;
+            font-size: $bodyFontSize;
+        }
+
+        button {
+            width : 10.71em;
+            padding : 10px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2em;
+            color : $headerFontColor;
+            margin-inline: auto;
+        }
+    }
 }

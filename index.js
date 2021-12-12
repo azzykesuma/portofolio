@@ -62,3 +62,5 @@ projectNav.addEventListener('click', function(e) {
   projectContainer.classList.add('active_nav')
   projectContainer.style.width = '300px';
 });
+
+// toggling dark mode

@@ -184,3 +184,101 @@ function checkInput() {
   }
 
 }
+
+const toggleSwitch  = document.getElementById('toggleSwitch');
+
+const toggle = () => {
+  const intro = document.querySelector('.intro');
+  const work = document.querySelector('.work');
+  const tools = document.querySelector('.tools');
+  const recentWork = document.querySelector('.recentWork');
+  const contact = document.querySelector('.contact');
+  const footer = document.querySelector('footer')
+  const mobileNav = document.querySelector('.mobileNav')
+  const headerOne = document.querySelector('h1');
+  const headerTwo = document.querySelectorAll('h2');
+  const headerThree = document.querySelectorAll('h3');
+  const headerfour = document.querySelectorAll('h4');
+  const paragraph = document.querySelectorAll('p');
+  const links= document.querySelectorAll('a');
+  const sideNavContainer = document.querySelector('.sidenavContainer')
+  const projectContainer = document.querySelector('.projectContainer')
+  const one = document.querySelector('.one')
+  const two = document.querySelector('.two')
+  const three = document.querySelector('.three')
+
+  
+  if(toggleSwitch.checked) {
+    headerOne.style.color = '#ECB365'
+    intro.style.backgroundColor = '#191A19';
+    work.style.backgroundColor = '#191A19';
+    tools.style.backgroundColor = '#191A19';
+    recentWork.style.backgroundColor = '#191A19';
+    contact.style.backgroundColor = '#191A19';
+    footer.style.backgroundColor = '#191A19';
+    mobileNav.style.backgroundColor = '#191A19';
+    sideNavContainer.style.backgroundColor = '#041C32';
+    projectContainer.style.backgroundColor = '#04293A';
+    one.style.backgroundColor = 'white';
+    two.style.backgroundColor = 'white';
+    three.style.backgroundColor = 'white';
+    
+
+
+    for (let i = 0;i < paragraph.length; i++) {
+      paragraph[i].style.color = 'white'
+    }
+
+    for (let i = 0;i < headerTwo.length; i++) {
+      headerTwo[i].style.color = '#D8E9A8'
+    } 
+
+    for (let i = 0;i < headerThree.length; i++) {
+      headerThree[i].style.color = '#D8E9A8'
+    }
+     
+    for (let i = 0;i < headerfour.length; i++) {
+      headerfour[i].style.color = '#D8E9A8'
+    } 
+    
+    for (let i = 0;i < links.length; i++) {
+      links[i].style.color = '#bb86fc'
+    } 
+  } else {
+    headerOne.style.color = '#484B6A'
+    intro.style.backgroundColor = '#FAFAFA';
+    work.style.backgroundColor = '#E4E5F1';
+    tools.style.backgroundColor = '#FAFAFA';
+    recentWork.style.backgroundColor = '#E4E5F1';
+    contact.style.backgroundColor = '#FAFAFA';
+    footer.style.backgroundColor = '#E4E5F1';
+    mobileNav.style.backgroundColor = '#E4E5F1';
+    sideNavContainer.style.backgroundColor = '#E4E5F1';
+    projectContainer.style.backgroundColor = '#FAFAFA';
+    one.style.backgroundColor = 'black';
+    two.style.backgroundColor = 'black';
+    three.style.backgroundColor = 'black';
+
+    for (let i = 0;i < paragraph.length; i++) {
+      paragraph[i].style.color = 'black'
+    }
+
+    for (let i = 0;i < headerTwo.length; i++) {
+      headerTwo[i].style.color = '#102542'
+    } 
+
+    for (let i = 0;i < headerThree.length; i++) {
+      headerThree[i].style.color = '#484B6A'
+    }
+     
+    for (let i = 0;i < headerfour.length; i++) {
+      headerfour[i].style.color = '#102542'
+    } 
+    
+    for (let i = 0;i < links.length; i++) {
+      links[i].style.color = '#bb86fc'
+    } 
+  }
+
+}
+toggleSwitch.addEventListener('change',toggle);
