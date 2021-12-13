@@ -251,13 +251,20 @@ input:checked + .slider:before {
 }
 @media (min-width: 768px) {
   .top_part h1 {
-    font-size: 5vw;
+    font-size: 3vw;
   }
 }
 
 .bottom_part {
   background-color: #6BAB90;
   padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
 }
 .bottom_part form {
   display: -webkit-box;
@@ -269,6 +276,7 @@ input:checked + .slider:before {
           flex-direction: column;
   gap: 10px;
   margin-bottom: 1.5em;
+  width: 50%;
 }
 .bottom_part form .formWrap {
   display: -webkit-box;
@@ -286,10 +294,23 @@ input:checked + .slider:before {
       -ms-flex-align: start;
           align-items: flex-start;
 }
+@media (min-width: 768px) {
+  .bottom_part form .formWrap {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    gap: 2em;
+  }
+}
 .bottom_part form input, .bottom_part form textarea {
   padding: 10px;
   width: 70%;
   font-size: 1em;
+}
+@media (min-width: 768px) {
+  .bottom_part form input, .bottom_part form textarea {
+    width: 100%;
+  }
 }
 .bottom_part form button {
   width: 10.71em;
@@ -299,4 +320,31 @@ input:checked + .slider:before {
   font-size: 1.2em;
   color: #484B6A;
   margin-inline: auto;
+}
+.bottom_part .socialFlag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 10px;
+  position: absolute;
+  right: 0;
+}
+.bottom_part .socialFlag div {
+  display: block;
+  background-color: #fff;
+  width: 20px;
+  height: 50px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.bottom_part .socialFlag .flag_active {
+  width: 50px;
+  height: 50px;
 }

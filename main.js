@@ -206,6 +206,8 @@ const toggle = () => {
   const one = document.querySelector('.one')
   const two = document.querySelector('.two')
   const three = document.querySelector('.three')
+  const form = document.querySelector('form');
+  const label = form.querySelectorAll('label');
 
   
   if(toggleSwitch.checked) {
@@ -222,7 +224,6 @@ const toggle = () => {
     one.style.backgroundColor = 'white';
     two.style.backgroundColor = 'white';
     three.style.backgroundColor = 'white';
-    
 
 
     for (let i = 0;i < paragraph.length; i++) {
@@ -244,6 +245,10 @@ const toggle = () => {
     for (let i = 0;i < links.length; i++) {
       links[i].style.color = '#bb86fc'
     } 
+
+    for (let i = 0;i < links.length; i++) {
+      label[i].style.color = '#bb86fc'
+    } 
   } else {
     headerOne.style.color = '#484B6A'
     intro.style.backgroundColor = '#FAFAFA';
@@ -257,7 +262,6 @@ const toggle = () => {
     projectContainer.style.backgroundColor = '#FAFAFA';
     one.style.backgroundColor = 'black';
     two.style.backgroundColor = 'black';
-    three.style.backgroundColor = 'black';
 
     for (let i = 0;i < paragraph.length; i++) {
       paragraph[i].style.color = 'black'
@@ -277,6 +281,10 @@ const toggle = () => {
     
     for (let i = 0;i < links.length; i++) {
       links[i].style.color = '#bb86fc'
+    } 
+    
+    for (let i = 0;i < links.length; i++) {
+      label[i].style.color = '#bb86fc'
     } 
   }
 

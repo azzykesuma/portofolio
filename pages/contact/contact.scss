@@ -16,7 +16,7 @@
         color : $headerFontColor;
 
         @include mQ($tablet) {
-            font-size: 5vw;
+            font-size: 3vw;
         }
     }
 }
@@ -24,12 +24,16 @@
 .bottom_part {
     background-color: #6BAB90;
     padding : $padding;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
 
     form {
         display: flex;
         flex-direction: column;
         gap : 10px;
         margin-bottom: 1.5em;
+        width: 50%;
 
         .formWrap {
             display: flex;
@@ -39,12 +43,21 @@
             &:nth-of-type(3) {
                 align-items: flex-start;
             }
+
+            @include mQ($tablet) {
+                justify-content: flex-start;
+                gap: 2em;
+            }
         }
 
         input,textarea {
             padding : 10px;
             width : 70%;
             font-size: $bodyFontSize;
+
+            @include mQ($tablet) {
+                width : 100%;
+            }
         }
 
         button {
@@ -55,6 +68,28 @@
             font-size: 1.2em;
             color : $headerFontColor;
             margin-inline: auto;
+        }
+    }
+
+    .socialFlag {
+        display : flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap : 10px;
+        position: absolute;
+        right: 0;
+
+        div {
+            display: block;  
+            background-color: #fff;
+            width : 20px;
+            height : 50px;
+            transition: .3s ease-in-out;
+        }
+
+        .flag_active {
+            width : 50px;
+            height : 50px;
         }
     }
 }
