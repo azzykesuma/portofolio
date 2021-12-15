@@ -119,15 +119,19 @@
                 <label for="name">Name</label>
                 <input type="text" id="name" />
             </div>
+            <p class="error">Name cannot be empty</p>
             <div class="formWrap">
                 <label for="email">Email</label>
                 <input type="email" id="email" />
             </div>
+            <p class="error">Email cannot be empty</p>
+            <p class="errorEmailFormat">please insert a correct email format</p>
             <div class="formWrap">
                 <label for="message">Message</label>
                 <textarea name="message" id="message" cols="20" rows="5"></textarea>
             </div>
-            <button type="submit">Submit</button>
+            <p class="error">Message cannot be empty</p>
+            <button type="submit" id="submit">Submit</button>
         </form>
         <div class="socialFlag">
             <div id="wa">wa</div>

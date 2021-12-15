@@ -33,12 +33,14 @@
         flex-direction: column;
         gap : 10px;
         margin-bottom: 1.5em;
-        width: 50%;
+        width: 80%;
+        max-width: 43em;
 
         .formWrap {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 2em;
 
             &:nth-of-type(3) {
                 align-items: flex-start;
@@ -46,17 +48,17 @@
 
             @include mQ($tablet) {
                 justify-content: flex-start;
-                gap: 2em;
+                gap: 5em;
             }
         }
 
         input,textarea {
+            width : 100%;
             padding : 10px;
-            width : 70%;
             font-size: $bodyFontSize;
 
             @include mQ($tablet) {
-                width : 100%;
+                max-width: 1000px;
             }
         }
 
@@ -67,7 +69,19 @@
             border-radius: 10px;
             font-size: 1.2em;
             color : $headerFontColor;
-            margin-inline: auto;
+            margin-left : auto;
+        }
+
+        .error,
+        .errorEmailFormat {
+            color: red;
+            text-align: right;
+            display : none;
+        }
+
+        .errorActive,
+        .errorEmail_active {
+            display: block;
         }
     }
 

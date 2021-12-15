@@ -276,7 +276,8 @@ input:checked + .slider:before {
           flex-direction: column;
   gap: 10px;
   margin-bottom: 1.5em;
-  width: 50%;
+  width: 80%;
+  max-width: 43em;
 }
 .bottom_part form .formWrap {
   display: -webkit-box;
@@ -288,6 +289,7 @@ input:checked + .slider:before {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 2em;
 }
 .bottom_part form .formWrap:nth-of-type(3) {
   -webkit-box-align: start;
@@ -299,17 +301,17 @@ input:checked + .slider:before {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    gap: 2em;
+    gap: 5em;
   }
 }
 .bottom_part form input, .bottom_part form textarea {
+  width: 100%;
   padding: 10px;
-  width: 70%;
   font-size: 1em;
 }
 @media (min-width: 768px) {
   .bottom_part form input, .bottom_part form textarea {
-    width: 100%;
+    max-width: 1000px;
   }
 }
 .bottom_part form button {
@@ -319,7 +321,17 @@ input:checked + .slider:before {
   border-radius: 10px;
   font-size: 1.2em;
   color: #484B6A;
-  margin-inline: auto;
+  margin-left: auto;
+}
+.bottom_part form .error,
+.bottom_part form .errorEmailFormat {
+  color: red;
+  text-align: right;
+  display: none;
+}
+.bottom_part form .errorActive,
+.bottom_part form .errorEmail_active {
+  display: block;
 }
 .bottom_part .socialFlag {
   display: -webkit-box;
