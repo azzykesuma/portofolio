@@ -12,6 +12,10 @@ header {
         align-items: center;
         justify-content: space-between;
         padding : $padding;
+
+        @include mQ($tablet) {
+            padding : 20px;
+        }
     }
 
     .circle {
@@ -80,6 +84,11 @@ header {
     }
 
     a {
+        color : #2F4858;
+
+        @include mQ($tablet) {
+            font-size: 1.3em;
+        }
 
         @include mQ($desktop) {
             font-size: 1.5em;
@@ -223,10 +232,11 @@ header {
 
     p {
         margin-top : 4em;
+        line-height: 1.5em;
+        font-size: 1.1em;
 
         @include mQ($desktop) {
             font-size: 1.3em;
-            line-height: 1.5em;
             max-width: 80ch;
         }
     }
@@ -251,7 +261,6 @@ header {
     background-color: $secondBcgColor;
     padding : 2em;
     z-index: 1;
-    height : 30em;
 
     h2 {
         text-align: center;
@@ -319,10 +328,10 @@ header {
         grid-template-columns: repeat(4, 1fr);
         gap : 10px;
 
-        div {
+
+        img {
             width : 50px;
             height : 50px;
-            background-color: red;
             border-radius: 50%;
             margin: 0 auto;
             display: flex;

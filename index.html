@@ -12,10 +12,11 @@
     <!-- css -->
     <link rel="stylesheet" href="./css/main.css" class="rel">
 
-    <title>Document</title>
+    <title>Azzy's Landing Page || Home Page</title>
+    <link rel="shortcut icon" href="./asset/logo.png" class="rel">
 </head>
 <body>
-    <header>
+    <header role="banner">
         <!-- mobile Nav -->
         <div class="mobileNav">
             <div class="circle"></div>
@@ -106,9 +107,9 @@
             <!-- toggle between name and frontend web dev -->
             <h2 id="name"><div id="blink"></div></h2>
             <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                Beatae ratione non placeat maxime accusantium alias porro exercitationem totam amet similique,
-                ipsum assumenda temporibus animi rerum quisquam. Velit facere dolorum libero.
+               Hello! My name is Azzy, an Indonesian based front end developer. I'm looking for an opportunity to collaborate with companies/agencies/individual,
+               to build a website that will have a great impact on them. I can create a fully functional, responsive, and user-friendly landing page. feel free to scroll through to some of
+               my work <a href="#">here</a>, and if you want to know more about me, feel free to contact me <a href="#"></a>.
             </p>
         </section>
         <section class="work">
@@ -116,22 +117,34 @@
             <div class="slideshow-container">
 
                 <!-- Full-width images with number and caption text -->
-                <div class="mySlides slide card">
-                    <img src="./asset/webDev.jpg" id="web-development" alt="web-development">
-                    <div class="workDescription">
-                        <h3>Web Development</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+                <div class="mySlides slide flip-card">
+                    <div class="flipcard-inner">
+                      <div class="flip-card-front">
+                        <img src="./asset/webDev.jpg" alt="web-development" />
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>Web Development</h1>
+                        <p>Create a resposive, interactive and stunning landing page.</p>
+                        <div class="skills">
+                            <div>HTML</div>
+                            <div>CSS</div>
+                            <div>JS</div>
+                        </div>
+                      </div>
                     </div>
                 </div>
-              
-                <div class="mySlides slide card">
-                  <img src="./asset/work.png" alt="" id="upgrade">
-                  <div class="workDescription">
-                    <h3>Skill Upgrade in process</h3>
-                    <p>Please wait</p>
+
+                <div class="mySlides slide flip-card">
+                    <div class="flipcard-inner">
+                      <div class="flip-card-front">
+                        <img src="./asset/work.png" alt="skill-upgrade-in-process" />
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>Upgrading skill...</h1>
+                        <p>Will be back with even more services!</p>
+                      </div>
+                    </div>
                 </div>
-                </div>
-              
               
                 <!-- Next and previous buttons -->
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -157,14 +170,11 @@
         <section class="tools">
             <h2>Tools and Language</h2>
             <div class="toolsWrap">
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
-                <div>4</div>
-                <div>5</div>
-                <div>6</div>
-                <div>7</div>
-                <div>8</div>
+                <div><img src="./asset/html.png" alt="html"></div>
+                <div><img src="./asset/css.png" alt="css"></div>
+                <div><img src="./asset/js.png" alt="js"></div>
+                <div><img src="./asset/github.png" alt="github"></div>
+                <div><img src="./asset/sass.jfif" alt=""></div>
             </div>
         </section>
         <section class="recentWork">

@@ -76,63 +76,6 @@ function showSlides(n) {
   // dots[slideIndex-1].className += " active";
 }
 
-// hover state in work section
-const webDev = document.getElementById('web-development');
-const workDescription = document.querySelectorAll('.workDescription');
-const upgrade = document.getElementById('upgrade');
-console.log(workDescription);
-webDev.addEventListener('mouseover', mouse_enter);
-webDev.addEventListener('mouseout', mouse_leave);
-upgrade.addEventListener('mouseover',mouse_enter);
-upgrade.addEventListener('mouseout',mouse_leave);
-
-function mouse_enter(e) {
-  const target = e.target;
-    if( target.id === 'web-development') {
-      workDescription[0].classList.add('work_active')
-    }
-    else {
-      workDescription[1].classList.add('work_active')
-    }
-}
-function mouse_leave(e) {
-  const target = e.target;
-  if( target.id === 'web-development') {
-    workDescription[0].classList.remove('work_active')
-  }
-  else {
-    workDescription[1].classList.remove('work_active')
-  }
-}
-
-// hover state in tablet and desktop
-const webDev_tablet = document.getElementById('web-development-tablet');
-const upgrade_tablet = document.getElementById('upgrade-tablet');
-
-webDev_tablet.addEventListener('mouseover', mouse_enter_tablet);
-webDev_tablet.addEventListener('mouseout', mouse_leave_tablet);
-upgrade_tablet.addEventListener('mouseover',mouse_enter_tablet);
-upgrade_tablet.addEventListener('mouseout',mouse_leave_tablet);
-
-function mouse_enter_tablet(e) {
-  const target = e.target;
-    if( target.id === webDev_tablet.id) {
-      workDescription[2].classList.add('work_active')
-    }
-    else {
-      workDescription[3].classList.add('work_active')
-    }
-}
-function mouse_leave_tablet(e) {
-  const target = e.target;
-  if( target.id === webDev_tablet.id) {
-    workDescription[2].classList.remove('work_active')
-  }
-  else {
-    workDescription[3].classList.remove('work_active')
-  }
-}
-
 // form validation
 const form = document.querySelector('form');
 const name_val = document.getElementById('nameVal');
