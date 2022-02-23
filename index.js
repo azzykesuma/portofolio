@@ -63,4 +63,43 @@ projectNav.addEventListener('click', function(e) {
   projectContainer.style.width = '300px';
 });
 
-// toggling dark mode
+// showcase function
+const portoImg = document.querySelectorAll('.porto');
+const portodesc = document.querySelectorAll('.portoDesc');
+
+portoImg.forEach(item => {
+  item.addEventListener('click', (e) => {
+    const target = e.target;
+    // add active class to the clicked portodesc
+     if(target === portoImg[0]) {
+      portodesc[0].classList.add('active');
+      portoImg[0].style.filter = 'brightness(0.2)';
+      portodesc[0].addEventListener('click', e => {
+        if(portodesc[0].classList.contains('active')) {
+          portodesc[0].classList.remove('active');
+          portoImg[0].style.filter = 'brightness(1)';
+        }
+      });
+    } 
+    else if(target === portoImg[1]) {
+      portodesc[1].classList.add('active');
+      portoImg[1].style.filter = 'brightness(0.2)';
+      portodesc[1].addEventListener('click', e => {
+        if(portodesc[1].classList.contains('active')) {
+          portodesc[1].classList.remove('active');
+          portoImg[1].style.filter = 'brightness(1)';
+        }
+      });
+    } 
+    else if(target === portoImg[2]) {
+      portodesc[2].classList.add('active');
+      portoImg[2].style.filter = 'brightness(0.2)';
+      portodesc[2].addEventListener('click', e => {
+        if(portodesc[2].classList.contains('active')) {
+          portodesc[2].classList.remove('active');
+          portoImg[2].style.filter = 'brightness(1)';
+        }
+      });
+    } 
+  })
+})

@@ -66,6 +66,29 @@ a {
   text-decoration: none;
 }
 
+.logo {
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.logo ion-icon {
+  font-size: 1.5em;
+  color: #18314F;
+}
+
 .tabletMode {
   display: none;
 }
@@ -145,6 +168,9 @@ a {
 }
 .flip-card-back h1 {
   font-size: 1.5em;
+}
+.flip-card-back p {
+  color: white;
 }
 .flip-card-back .skills {
   display: -webkit-box;
@@ -384,7 +410,7 @@ header .mobileNav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 10px;
+  padding: 20px;
 }
 @media (min-width: 768px) {
   header .mobileNav {
@@ -494,12 +520,12 @@ header .hamburger .three.active {
   height: 100vh;
 }
 .sidenavContainer.active_nav .navList {
-  padding: 10px;
+  padding: 20px;
 }
 .sidenavContainer.active_nav li {
   margin-bottom: 1.5em;
   margin-left: -10px;
-  padding: 10px;
+  padding: 20px;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
@@ -547,12 +573,12 @@ header .hamburger .three.active {
   height: 100%;
 }
 .projectContainer .projects {
-  padding: 10px;
+  padding: 20px;
 }
 .projectContainer .projects li {
   margin-bottom: 1.5em;
   margin-left: -10px;
-  padding: 10px;
+  padding: 20px;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
@@ -586,7 +612,7 @@ header .hamburger .three.active {
 
 .intro {
   background-color: #FAFAFA;
-  padding: 2em 10px;
+  padding: 2em 20px;
   position: relative;
 }
 .intro h1 {
@@ -688,7 +714,7 @@ header .hamburger .three.active {
 
 .tools {
   background-color: #FAFAFA;
-  padding: 10px;
+  padding: 20px;
 }
 .tools h2 {
   text-align: center;
@@ -767,7 +793,7 @@ header .hamburger .three.active {
 }
 
 .recentWork {
-  padding: 10px;
+  padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -797,19 +823,106 @@ header .hamburger .three.active {
   }
 }
 .recentWork .showCase {
-  width: 200px;
-  height: 100px;
-  background-color: lightcoral;
-  border-radius: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 100%;
+  height: 20em;
+  margin-bottom: 1.5em;
+  position: relative;
+}
+.recentWork .showCase .porto {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.recentWork .showCase .portoDesc {
+  padding: 20px;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 0;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
+}
+.recentWork .showCase .portoDesc h3, .recentWork .showCase .portoDesc p, .recentWork .showCase .portoDesc a {
+  color: white;
+  margin-bottom: 1em;
+}
+.recentWork .showCase .portoDesc h3 {
+  font-size: 1.5em;
+}
+.recentWork .showCase .portoDesc a {
+  margin-top: 0.5em;
+  font-size: 1.2em;
+}
+.recentWork .showCase .portoDesc a:hover {
+  text-decoration: underline;
+}
+.recentWork .showCase .portoDesc.active {
+  -webkit-animation: down 0.5s ease-in-out;
+          animation: down 0.5s ease-in-out;
+  height: 100%;
+  opacity: 1;
+  background-color: transparent;
+}
+@-webkit-keyframes down {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+  80% {
+    height: 100%;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes down {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+  80% {
+    height: 100%;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.recentWork .showCase .features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1em;
+}
+.recentWork .showCase .featureList {
+  background-color: #04395E;
+  color: white;
+  padding: 5px;
 }
 .recentWork a {
   text-decoration: none;
@@ -845,7 +958,7 @@ header .hamburger .three.active {
 }
 
 .contact {
-  padding: 10px;
+  padding: 20px;
   background-color: #FAFAFA;
 }
 .contact h2 {
@@ -914,7 +1027,7 @@ header .hamburger .three.active {
 
 footer {
   background-color: #E4E5F1;
-  padding: 10px;
+  padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -926,16 +1039,11 @@ footer {
       -ms-flex-align: center;
           align-items: center;
 }
-footer .circle {
-  width: 30px;
-  height: 30px;
-  background-color: red;
-  border-radius: 50%;
-}
 footer h4 {
   font-size: 1em;
   color: #102542;
   margin-top: 1.5em;
+  text-align: center;
 }
 footer ul {
   text-align: center;

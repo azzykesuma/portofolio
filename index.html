@@ -19,7 +19,7 @@
     <header role="banner">
         <!-- mobile Nav -->
         <div class="mobileNav">
-            <div class="circle"></div>
+            <div class="logo"><img src="./asset/logo.png" alt=""></div>
             <div class="toggleWrap">
                 <label class="switch">
                     <input type="checkbox" id="toggleSwitch">
@@ -106,7 +106,7 @@
             <h1>Hello World!</h1>
             <!-- toggle between name and frontend web dev -->
             <h2 id="name"><div id="blink"></div></h2>
-            <p>
+            <p class="interactive__text">
                Hello! My name is Azzy, an Indonesian based front end developer. I'm looking for an opportunity to collaborate with companies/agencies/individual,
                to build a website that will have a great impact on them. I can create a fully functional, responsive, and user-friendly landing page. feel free to scroll through to some of
                my work <a href="#">here</a>, and if you want to know more about me, feel free to contact me <a href="#"></a>.
@@ -180,9 +180,49 @@
         <section class="recentWork">
             <h2>Recent Work</h2>
             <div class="showCaseWrap">
-                <div class="showCase">1</div>
-                <div class="showCase">2</div>
-                <div class="showCase">3</div>
+                <div class="showCase">
+                    <img class="porto" src="./asset/work1.png" alt="landing-page-easy-bank">
+                    <div class="portoDesc">
+                        <h3>Easy Bank Landing Page</h3>
+                        <p>A landing page challenge by frontend mentor. </p>
+                        <div class="features">
+                            <div class="featureList">Responsive</div>
+                            <div class="featureList">HTML</div>
+                            <div class="featureList">CSS/SASS</div>
+                            <div class="featureList">Javascript</div>
+                        </div>
+                        <a href="#">View Project</a>
+                    </div>
+                </div>
+                <div class="showCase">
+                    <img class="porto" src="./asset/work2.png" alt="fylo-landing-page">
+                    <div class="portoDesc">
+                        <h3>Fylo dark theme landing page</h3>
+                        <p>A Fylo landing page challenge by frontend mentor.</p>
+                        <div class="features">
+                            <div class="featureList">Responsive</div>
+                            <div class="featureList">HTML</div>
+                            <div class="featureList">CSS/SASS</div>
+                            <div class="featureList">Javascript</div>
+                        </div>
+                        <a href="#">View Project</a>
+                    </div>
+                </div>
+                <div class="showCase">
+                    <img class="porto" src="./asset/work3.png" alt="weather-map">
+                    <div class="portoDesc">
+                        <h3>Weather forecast app</h3>
+                        <p>A weather forecast app, using mapbox API and openweather API</p>
+                        <div class="features">
+                            <div class="featureList">Responsive</div>
+                            <div class="featureList">HTML</div>
+                            <div class="featureList">CSS/SASS</div>
+                            <div class="featureList">Javascript</div>
+                            <div class="featureList">API</div>
+                        </div>
+                        <a href="#">View Project</a>
+                    </div>
+                </div>
             </div>
             <a href="#">See More...</a>
         </section>
@@ -215,17 +255,21 @@
         </section>
     </main>
     <footer>
-        <div class="circle"></div>
-        <h4>"Some motivational quotes"</h4>
+        <div class="logo"><img src="./asset/logo.png" alt="logo-azzy"></div>
+        <p class="interactive__text">
+            If you are interested in collaborating with me, feel free to contact me in these social media. Jakarta time zone applies,
+            so i'm sorry if your message is not answered in time, thank you!
+        </p>
         <ul>
             <li><a href="./index.html">Home</a></li>
             <li><a href="./pages/portofolio/portofolio.html">Portofolio</a></li>
             <li><a href="./pages/contact/contact.html">Contact Me</a></li>
         </ul>
         <div class="socialMediaWrap">
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
+            <div class="logo"><a href="https://www.instagram.com/azzykesuma/"><ion-icon class="icons" name="logo-instagram"></ion-icon></a></div>
+            <div class="logo"><a href="https://github.com/azzykesuma"><ion-icon class="icons" name="logo-github"></ion-icon></a></div>
+            <div class="logo"><a href="mailto:official.azzy@gmail.com"><ion-icon class="icons" name="mail"></ion-icon></a></div>
+            <div class="logo"><a href="https://wa.me/6285866195626"><ion-icon class="icons" name="logo-whatsapp"></ion-icon></div>
         </div>
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

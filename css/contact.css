@@ -1,3 +1,26 @@
+.logo {
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.logo ion-icon {
+  font-size: 1.5em;
+  color: #18314F;
+}
+
 .tabletMode {
   display: none;
 }
@@ -77,6 +100,9 @@
 }
 .flip-card-back h1 {
   font-size: 1.5em;
+}
+.flip-card-back p {
+  color: white;
 }
 .flip-card-back .skills {
   display: -webkit-box;
@@ -324,7 +350,7 @@ input:checked + .slider:before {
 
 .bottom_part {
   background-color: #6BAB90;
-  padding: 10px;
+  padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

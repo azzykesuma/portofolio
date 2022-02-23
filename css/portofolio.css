@@ -1,3 +1,26 @@
+.logo {
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.logo ion-icon {
+  font-size: 1.5em;
+  color: #18314F;
+}
+
 .tabletMode {
   display: none;
 }
@@ -77,6 +100,9 @@
 }
 .flip-card-back h1 {
   font-size: 1.5em;
+}
+.flip-card-back p {
+  color: white;
 }
 .flip-card-back .skills {
   display: -webkit-box;
@@ -304,7 +330,7 @@ input:checked + .slider:before {
 
 .topSection {
   background-color: #FAFAFA;
-  padding: 10px;
+  padding: 20px;
   text-align: center;
 }
 .topSection h1 {
@@ -335,7 +361,7 @@ input:checked + .slider:before {
 
 .filterPart {
   background-color: #E4E5F1;
-  padding: 10px;
+  padding: 20px;
 }
 .filterPart button {
   font-size: "Montserrat";
@@ -355,7 +381,7 @@ input:checked + .slider:before {
 
 .projectWrap {
   background-color: #FAFAFA;
-  padding: 10px;
+  padding: 20px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 10px 1fr;
@@ -364,7 +390,7 @@ input:checked + .slider:before {
 }
 .projectWrap .projectCard {
   background-color: #F28482;
-  padding: 10px;
+  padding: 20px;
   min-height: 100px;
   display: -webkit-box;
   display: -ms-flexbox;

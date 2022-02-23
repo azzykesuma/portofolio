@@ -371,13 +371,85 @@ header {
     }
 
     .showCase {
-        width: 200px;
-        height: 100px;
-        background-color: lightcoral;
-        border-radius: 10px;
         display: flex;
         justify-content: center;
-        align-items: center;
+        width: 100%;
+        height: 20em;
+        margin-bottom: 1.5em;
+        position: relative;
+
+        .porto {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            transition: 0.3s ease-in-out;
+        }
+
+        .portoDesc {
+            padding : $padding;
+            opacity: 0;
+            position: absolute;
+            width : 100%;
+            height : 0;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            h3,p,a {
+                color : white;
+                margin-bottom: 1em;
+            }
+
+            h3 {
+                font-size: 1.5em;
+                
+            }
+
+            a {
+                margin-top: .5em;
+                font-size: 1.2em;
+                
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .portoDesc.active {
+            animation: down .5s ease-in-out;
+            height : 100%;
+            opacity: 1;
+            background-color: transparent;
+        }
+
+        @keyframes down {
+            0% {
+                height : 0;
+                opacity: 0;
+            } 
+            80% {
+                height : 100%;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap : 1em;
+        }
+        
+        .featureList {
+            background-color: #04395E;
+            color : white;
+            padding : 5px;
+        }
     }
 
     a {
@@ -470,17 +542,11 @@ footer {
     flex-direction: column;
     align-items: center;
 
-    .circle {
-        width : 30px;
-        height : 30px;
-        background-color: red;
-        border-radius: 50%;
-    }
-
     h4 {
         font-size: $bodyFontSize;
         color : $bodyFontColor;
         margin-top: 1.5em;
+        text-align: center;
     }
 
     ul {
