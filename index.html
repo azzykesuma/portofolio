@@ -48,11 +48,11 @@
                 <li><a href="#">Home</a></li>
                 <li>
                     <div id="projectNav">
-                        <a href="#">Portofolio</a>
+                        <a href="./pages/portofolio/portofolio.html">Portofolio</a>
                         <ion-icon name="chevron-forward-outline"></ion-icon>
                     </div>
                 </li>
-                <li> <a href="#">Contact me</a></li>
+                <li> <a href="./pages/contact/contact.html">Contact me</a></li>
             </ul>
         </div>
         <div class="projectContainer">
@@ -109,7 +109,7 @@
             <p class="interactive__text">
                Hello! My name is Azzy, an Indonesian based front end developer. I'm looking for an opportunity to collaborate with companies/agencies/individual,
                to build a website that will have a great impact on them. I can create a fully functional, responsive, and user-friendly landing page. feel free to scroll through to some of
-               my work <a href="#">here</a>, and if you want to know more about me, feel free to contact me <a href="#"></a>.
+               my work <a href="./pages/portofolio/portofolio.html">here</a>, and if you want to know more about me, feel free to contact me <a href="./pages/contact/contact.html">here</a>.
             </p>
         </section>
         <section class="work">
@@ -151,19 +151,32 @@
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
             <div class="tabletMode">
-                <div class="card">
-                    <img src="./asset/webDev.jpg" id="web-development-tablet" alt="web-development">
-                    <div class="workDescription">
-                        <h3>Web Development</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+                <div class="flip-card">
+                    <div class="flipcard-inner">
+                      <div class="flip-card-front">
+                        <img src="./asset/webDev.jpg" alt="skill-upgrade-in-process" />
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>Web Development</h1>
+                        <p>Create a resposive, interactive and stunning landing page.</p>
+                        <div class="skills">
+                            <div>HTML</div>
+                            <div>CSS</div>
+                            <div>JS</div>
+                        </div>
+                      </div>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="./asset/work.png" alt="" id="upgrade-tablet">
-                  <div class="workDescription">
-                    <h3>Skill Upgrade in process</h3>
-                    <p>Please wait</p>
-                </div>
+                <div class="flip-card">
+                    <div class="flipcard-inner">
+                      <div class="flip-card-front">
+                        <img src="./asset/work.png" alt="skill-upgrade-in-process" />
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>Upgrading skill...</h1>
+                        <p>Will be back with even more services!</p>
+                      </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -224,7 +237,7 @@
                     </div>
                 </div>
             </div>
-            <a href="#">See More...</a>
+            <a href="./pages/portofolio/portofolio.html">See More...</a>
         </section>
         <section class="contact">
             <h2>Contact Me</h2>
@@ -251,7 +264,6 @@
                 <p class="error">Message cannot be empty</p>
                 <button type="submit">Submit</button>
             </form>
-            <h3>Or reach me here : +62 85866195626</h3>
         </section>
     </main>
     <footer>

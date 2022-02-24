@@ -35,13 +35,149 @@
   }
 }
 
+.showCase {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 20em;
+  margin-bottom: 1.5em;
+  position: relative;
+}
+.showCase .porto {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+@media (min-width: 768px) {
+  .showCase .porto {
+    width: 80%;
+    height: 80%;
+  }
+}
+@media (min-width: 768px) {
+  .showCase .porto {
+    width: 100%;
+    height: 100%;
+  }
+}
+.showCase .portoDesc {
+  padding: 20px;
+  display: none;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 0;
+  border-radius: 5px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+.showCase .portoDesc h3, .showCase .portoDesc p, .showCase .portoDesc a {
+  color: white;
+  margin-bottom: 1em;
+}
+.showCase .portoDesc h3 {
+  font-size: 1.5em;
+}
+.showCase .portoDesc a {
+  margin-top: 0.5em;
+  font-size: 1.2em;
+}
+.showCase .portoDesc a:hover {
+  text-decoration: underline;
+}
+.showCase .portoDesc.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: down 0.5s ease-in-out;
+          animation: down 0.5s ease-in-out;
+  height: 100%;
+  opacity: 1;
+  background-color: transparent;
+}
+@media (min-width: 768px) {
+  .showCase .portoDesc.active {
+    height: 80%;
+  }
+}
+@media (min-width: 1020px) {
+  .showCase .portoDesc.active {
+    height: 100%;
+  }
+}
+@-webkit-keyframes down {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+  80% {
+    height: 100%;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes down {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+  80% {
+    height: 100%;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.showCase .features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1em;
+}
+.showCase .featureList {
+  background-color: #04395E;
+  color: white;
+  padding: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: #102542;
+}
+
 .flip-card {
   background-color: transparent;
   width: 300px;
   height: 200px;
   -webkit-perspective: 1000px;
           perspective: 1000px;
-  /* Remove this if you don't want the 3D effect */
+}
+@media (min-width: 1020px) {
+  .flip-card {
+    width: 28.5em;
+    height: 21.4em;
+  }
 }
 
 .flipcard-inner {
@@ -62,7 +198,6 @@
           transform: rotateY(180deg);
 }
 
-/* Position the front and back side */
 .flip-card-front, .flip-card-back {
   position: absolute;
   width: 100%;
@@ -72,14 +207,12 @@
   backface-visibility: hidden;
 }
 
-/* Style the front side (fallback if image is missing) */
 .flip-card-front img {
   width: 100%;
   height: 100%;
   border-radius: 5px;
 }
 
-/* Style the back side */
 .flip-card-back {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -101,8 +234,18 @@
 .flip-card-back h1 {
   font-size: 1.5em;
 }
+@media (min-width: 1020px) {
+  .flip-card-back h1 {
+    font-size: 2em;
+  }
+}
 .flip-card-back p {
   color: white;
+}
+@media (min-width: 1020px) {
+  .flip-card-back p {
+    font-size: 1.2em;
+  }
 }
 .flip-card-back .skills {
   display: -webkit-box;
@@ -384,8 +527,8 @@ input:checked + .slider:before {
   padding: 20px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 10px 1fr;
-  grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr;
+  grid-template-rows: repeat(6, 1fr);
   gap: 10px;
 }
 .projectWrap .projectCard {

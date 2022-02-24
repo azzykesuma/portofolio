@@ -27,11 +27,122 @@
   }
 }
 
+.showCase {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 20em;
+  margin-bottom: 1.5em;
+  position: relative;
+
+  .porto {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      transition: 0.3s ease-in-out;
+
+      @include mQ($tablet) {
+          width: 80%;
+          height: 80%;
+      }
+
+      @include mQ($tablet) {
+          width: 100%;
+          height: 100%;
+      }
+  }
+
+  .portoDesc {
+      padding : $padding;
+      display: none;
+      opacity: 0;
+      position: absolute;
+      width : 100%;
+      height : 0;
+      border-radius: 5px;
+      // display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      h3,p,a {
+          color : white;
+          margin-bottom: 1em;
+      }
+
+      h3 {
+          font-size: 1.5em;
+      }
+
+      a {
+          margin-top: .5em;
+          font-size: 1.2em;
+          
+          &:hover {
+              text-decoration: underline;
+          }
+      }
+  }
+
+  .portoDesc.active {
+      display: flex;
+      animation: down .5s ease-in-out;
+      height : 100%;
+      opacity: 1;
+      background-color: transparent;
+
+      @include mQ($tablet) {
+          height: 80%;
+      }
+
+      @include mQ($desktop) {
+          height: 100%;
+      }
+  }
+
+  @keyframes down {
+      0% {
+          height : 0;
+          opacity: 0;
+      } 
+      80% {
+          height : 100%;
+      }
+      100% {
+          opacity: 1;
+      }
+  }
+
+  .features {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap : 1em;
+  }
+  
+  .featureList {
+      background-color: #04395E;
+      color : white;
+      padding : 5px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $bodyFontColor;
+}
+
   .flip-card {
     background-color: transparent;
     width: 300px;
     height: 200px;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    perspective: 1000px; 
+
+    @include mQ($desktop) {
+      width : 28.5em;
+      height: 21.4em;
+    }
   }
 
   .flipcard-inner {
@@ -47,7 +158,6 @@
     transform: rotateY(180deg);
   }
   
-  /* Position the front and back side */
   .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
@@ -56,7 +166,6 @@
     backface-visibility: hidden;
   }
   
-  /* Style the front side (fallback if image is missing) */
   .flip-card-front {
 
     img {
@@ -66,7 +175,6 @@
     }
   }
   
-  /* Style the back side */
   .flip-card-back {
     display: flex;
     flex-direction: column;
@@ -79,10 +187,17 @@
 
     h1 {
       font-size: 1.5em;
+
+      @include mQ($desktop) {
+        font-size: 2em;
+      }
     }
 
     p {
       color : white;
+      @include mQ($desktop) {
+        font-size: 1.2em;
+      }
     }
 
     .skills {

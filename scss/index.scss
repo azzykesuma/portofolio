@@ -370,92 +370,6 @@ header {
         }
     }
 
-    .showCase {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        height: 20em;
-        margin-bottom: 1.5em;
-        position: relative;
-
-        .porto {
-            width: 100%;
-            height: 100%;
-            border-radius: 10px;
-            transition: 0.3s ease-in-out;
-        }
-
-        .portoDesc {
-            padding : $padding;
-            opacity: 0;
-            position: absolute;
-            width : 100%;
-            height : 0;
-            border-radius: 5px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-
-            h3,p,a {
-                color : white;
-                margin-bottom: 1em;
-            }
-
-            h3 {
-                font-size: 1.5em;
-                
-            }
-
-            a {
-                margin-top: .5em;
-                font-size: 1.2em;
-                
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-        }
-
-        .portoDesc.active {
-            animation: down .5s ease-in-out;
-            height : 100%;
-            opacity: 1;
-            background-color: transparent;
-        }
-
-        @keyframes down {
-            0% {
-                height : 0;
-                opacity: 0;
-            } 
-            80% {
-                height : 100%;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-        .features {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap : 1em;
-        }
-        
-        .featureList {
-            background-color: #04395E;
-            color : white;
-            padding : 5px;
-        }
-    }
-
-    a {
-        text-decoration: none;
-        color: $bodyFontColor;
-    }
 
     .showCaseWrap {
         width : 100%;
@@ -464,9 +378,11 @@ header {
         justify-content: center;
         align-items: center;
         gap: 10px;
-        @include mQ($tablet) {
+
+        @include mQ($desktop) {
             flex-direction: row;
             justify-content: space-evenly;
+            gap : 20px;
         }
     }
 }
@@ -542,11 +458,17 @@ footer {
     flex-direction: column;
     align-items: center;
 
-    h4 {
+    .interactive__text {
         font-size: $bodyFontSize;
         color : $bodyFontColor;
         margin-top: 1.5em;
         text-align: center;
+
+        @include mQ($tablet) {
+            max-width: 60ch;
+            font-size: 1.3em;
+            line-height : 1.5em;
+        }
     }
 
     ul {
@@ -563,6 +485,12 @@ footer {
         margin-bottom: .8em;
     }
 
+    a {
+
+        @include mQ($tablet) {
+            font-size: 1.2em;
+        }
+    }
 
     .socialMediaWrap {
         display: flex;

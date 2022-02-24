@@ -231,7 +231,11 @@ const toggle = () => {
     
     for (let i = 0;i < label.length; i++) {
       label[i].style.color = '#bb86fc'
-    } 
+    }
+    
+    for (let i = 0; i < icons.length; i++) {
+      icons[i].style.color = '#18314F'
+    }
   }
 
 }
