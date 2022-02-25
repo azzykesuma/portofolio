@@ -100,6 +100,33 @@ portoImg.forEach(item => {
           portoImg[2].style.filter = 'brightness(1)';
         }
       });
-    } 
-  })
-})
+    } else if (target === portoImg[3]) {
+      portodesc[3].classList.add('active');
+      portoImg[3].style.filter = 'brightness(0.2)';
+      portodesc[3].addEventListener('click', e => {
+        if(portodesc[3].classList.contains('active')) {
+          portodesc[3].classList.remove('active');
+          portoImg[3].style.filter = 'brightness(1)';
+        }
+      });
+    } else if (target === portoImg[4]) {
+      portodesc[4].classList.add('active');
+      portoImg[4].style.filter = 'brightness(0.2)';
+      portodesc[4].addEventListener('click', e => {
+        if(portodesc[4].classList.contains('active')) {
+          portodesc[4].classList.remove('active');
+          portoImg[4].style.filter = 'brightness(1)';
+        }
+      });
+    } else if (target === portoImg[5]) {
+      portodesc[5].classList.add('active');
+      portoImg[5].style.filter = 'brightness(0.2)';
+      portodesc[5].addEventListener('click', e => {
+        if(portodesc[5].classList.contains('active')) {
+          portodesc[5].classList.remove('active');
+          portoImg[5].style.filter = 'brightness(1)';
+        }
+      });
+    }
+  }
+)});

@@ -60,12 +60,6 @@
     height: 80%;
   }
 }
-@media (min-width: 768px) {
-  .showCase .porto {
-    width: 100%;
-    height: 100%;
-  }
-}
 .showCase .portoDesc {
   padding: 20px;
   display: none;
@@ -515,11 +509,22 @@ input:checked + .slider:before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+.filterPart #filterResult {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+.filterPart #filterResult span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 10px;
-  cursor: pointer;
 }
 
 .projectWrap {
@@ -531,35 +536,52 @@ input:checked + .slider:before {
   grid-template-rows: repeat(6, 1fr);
   gap: 10px;
 }
-.projectWrap .projectCard {
-  background-color: #F28482;
-  padding: 20px;
-  min-height: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  border-radius: 10px;
+@media (min-width: 1020px) {
+  .projectWrap {
+    -ms-grid-columns: 1fr 2em 1fr 2em 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: 1fr 2em 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2em;
+  }
+  .projectWrap > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .projectWrap > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .projectWrap > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+  }
+  .projectWrap > *:nth-child(4) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .projectWrap > *:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .projectWrap > *:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 5;
+  }
 }
 .projectWrap h2 {
   text-align: center;
   font-weight: 600;
 }
-.projectWrap .techStack {
-  background-color: #160F29;
-  width: 0;
-  margin-left: -10px;
-  margin-bottom: -10px;
-  margin-right: -10px;
-  height: auto;
-  padding: 0;
-  color: white;
-  border-radius: 0 0 10px 10px;
-  text-align: center;
+.projectWrap .porto {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
-.projectWrap .techStack p {
-  display: none;
+@media (min-width: 1020px) {
+  .projectWrap .porto {
+    width: 100%;
+  }
 }

@@ -18,7 +18,7 @@
     <header>
         <!-- mobile Nav -->
         <div class="mobileNav">
-            <div class="circle"></div>
+            <div class="logo"><img src="../../asset/logo.png" alt=""></div>
             <div class="toggleWrap">
                 <label class="switch">
                     <input type="checkbox" id='togglePort'>
@@ -106,16 +106,18 @@
         <div class="topSection">
             <h1>My personal Project</h1>
             <div class="buttonWrap">
-                <button>HTML</button>
-                <button>CSS</button>
-                <button>Javascript</button>
-                <button>SASS</button>
-                <button>Bootstrap</button>
+                <button id="html">HTML</button>
+                <button id="css">CSS</button>
+                <button id="js">Javascript</button>
+                <button id="sass">SASS</button>
+                <button id="api">API</button>
             </div>
         </div>
         <div class="filterPart">
             <!-- filter result -->
-            <button>HTML <ion-icon name="close-circle-outline"></ion-icon></button>
+            <ul id="filterResult">
+
+            </ul>
         </div>
         <div class="projectWrap">
             <div class="showCase">
@@ -162,9 +164,23 @@
                 </div>
             </div>
             <div class="showCase">
-                <img class="porto" src="../../asset/work1.png" alt="landing-page-easy-bank">
+                <img class="porto" src="../../asset/work4.png" alt="landing-page-easy-bank">
                 <div class="portoDesc">
-                    <h3>Easy Bank Landing Page</h3>
+                    <h3>BMG Landing Page</h3>
+                    <p>A non profit HIV outreach landing page</p>
+                    <div class="features">
+                        <div class="featureList">Responsive</div>
+                        <div class="featureList">HTML</div>
+                        <div class="featureList">CSS/SASS</div>
+                        <div class="featureList">Javascript</div>
+                    </div>
+                    <a href="#">View Project</a>
+                </div>
+            </div>
+            <div class="showCase">
+                <img class="porto" src="../../asset/work5.png" alt="landing-page-room">
+                <div class="portoDesc">
+                    <h3>Room Landing Page </h3>
                     <p>A landing page challenge by frontend mentor. </p>
                     <div class="features">
                         <div class="featureList">Responsive</div>
@@ -176,24 +192,10 @@
                 </div>
             </div>
             <div class="showCase">
-                <img class="porto" src="../../asset/work1.png" alt="landing-page-easy-bank">
+                <img class="porto" src="../../asset/work6.png" alt="todo-app">
                 <div class="portoDesc">
-                    <h3>Easy Bank Landing Page</h3>
-                    <p>A landing page challenge by frontend mentor. </p>
-                    <div class="features">
-                        <div class="featureList">Responsive</div>
-                        <div class="featureList">HTML</div>
-                        <div class="featureList">CSS/SASS</div>
-                        <div class="featureList">Javascript</div>
-                    </div>
-                    <a href="#">View Project</a>
-                </div>
-            </div>
-            <div class="showCase">
-                <img class="porto" src="../../asset/work1.png" alt="landing-page-easy-bank">
-                <div class="portoDesc">
-                    <h3>Easy Bank Landing Page</h3>
-                    <p>A landing page challenge by frontend mentor. </p>
+                    <h3>Todo App</h3>
+                    <p>A simple to do app, with priority and filter </p>
                     <div class="features">
                         <div class="featureList">Responsive</div>
                         <div class="featureList">HTML</div>
@@ -206,17 +208,21 @@
         </div>
     </main>
     <footer>
-        <div class="circle">img</div>
-        <h4>Some motivational quotes</h4>
+        <div class="logo"><img src="../../asset/logo.png" alt="logo-azzy"></div>
+        <p class="interactive__text">
+            If you are interested in collaborating with me, feel free to contact me in these social media. Jakarta time zone applies,
+            so i'm sorry if your message is not answered in time, thank you!
+        </p>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Portofolio</a></li>
-            <li><a href="#">Contact Me</a></li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./pages/portofolio/portofolio.html">Portofolio</a></li>
+            <li><a href="./pages/contact/contact.html">Contact Me</a></li>
         </ul>
         <div class="socialMediaWrap">
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
+            <div class="logo"><a href="https://www.instagram.com/azzykesuma/"><ion-icon class="icons" name="logo-instagram"></ion-icon></a></div>
+            <div class="logo"><a href="https://github.com/azzykesuma"><ion-icon class="icons" name="logo-github"></ion-icon></a></div>
+            <div class="logo"><a href="mailto:official.azzy@gmail.com"><ion-icon class="icons" name="mail"></ion-icon></a></div>
+            <div class="logo"><a href="https://wa.me/6285866195626"><ion-icon class="icons" name="logo-whatsapp"></ion-icon></div>
         </div>
     </footer>
     <script src="../../index.js"></script>
