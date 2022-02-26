@@ -27,7 +27,6 @@ const toggle = () => {
     const mobileNav = document.querySelector('.mobileNav');
     const sideNavContainer = document.querySelector('.sidenavContainer');
     const topSection = document.querySelector('.topSection');
-    const filterPart = document.querySelector('.filterPart');
     const projectWrap = document.querySelector('.projectWrap');
     const footer = document.querySelector('footer');
     const links= document.querySelectorAll('a');
@@ -39,7 +38,6 @@ const toggle = () => {
         headerOne.style.color = '#ECB365'
         mobileNav.style.backgroundColor = '#191A19'
         topSection.style.backgroundColor = '#191A19'
-        filterPart.style.backgroundColor = '#191A19'
         projectWrap.style.backgroundColor = '#191A19'
         footer.style.backgroundColor = '#191A19'
         one.style.backgroundColor = 'white';
@@ -65,7 +63,6 @@ const toggle = () => {
         mobileNav.style.backgroundColor = '#E4E5F1';
         sideNavContainer.style.backgroundColor = '#E4E5F1';
         topSection.style.backgroundColor = '#FAFAFA'
-        filterPart.style.backgroundColor = '#E4E5F1'
         projectWrap.style.backgroundColor = '#FAFAFA'
         one.style.backgroundColor = 'black';
         two.style.backgroundColor = 'black';
@@ -88,16 +85,3 @@ const toggle = () => {
 togglePort.addEventListener('change',toggle);
 
 
-// filter function
-const buttonWrap = document.querySelector('.buttonWrap');
-const filterPart = document.querySelector('.filterPart');
-const filterResult = document.getElementById('filterResult');
-
-buttonWrap.addEventListener('click',filter);
-function filter(e) {
-    const target = e.target;
-    const addNode = document.createElement('li');
-    filterResult.appendChild(addNode);
-
-    addNode.innerHTML = `<button>${target.id}<span><ion-icon name="close-circle-outline"></ion-icon></span></button>`;
-}
