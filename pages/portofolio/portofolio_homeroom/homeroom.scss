@@ -12,10 +12,6 @@ p {
     line-height: 1.5em;
 }
 
-.leftContainer {
-    background-color: $firstBcgColor;
-}
-
 main {
     display: flex;
     flex-direction: column;
@@ -23,6 +19,10 @@ main {
     @include mQ($desktop) {
         flex-direction: row;
     }
+}
+
+.leftContainer {
+    background-color: $firstBcgColor;
 }
 
 .aboutProject {
@@ -88,6 +88,13 @@ main {
             font-size: 1.3em;
         }
     }
+
+    .website {
+        font-size: 1.5em;
+        display: flex;
+        align-items: center;
+        gap : 5px;
+    }
 }
 
 .gallery {
@@ -111,4 +118,5 @@ main {
             width : 80%;
         }
     }
+
 }
