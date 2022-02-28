@@ -1,0 +1,122 @@
+@import '../../../scss/variable.scss';
+@import '../../../scss/mixin.scss';
+@import '../../../scss/utility.scss';
+
+* {
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+
+    @include mQ($desktop) {
+        flex-direction: row;
+    }
+}
+
+.leftContainer {
+    background-color: $firstBcgColor;
+}
+
+.aboutProject {
+    padding : $padding;
+    background-color: $firstBcgColor;
+
+    h1 {
+        font-family: $headerFont;
+        font-size: $headerFontSize;
+        margin-bottom: 1em;
+        color : $headerFontColor;
+    }
+
+    p {
+        font-family: $bodyFont;
+        color : $bodyFontColor;
+
+        @include mQ($desktop) {
+            font-size: 1.3em;
+        }
+    }
+}
+
+.technicals {
+    padding : $padding;
+    background-color: $secondBcgColor;
+
+    h2,h3 {
+        font-family: $headerFont;
+        margin-bottom: 1em;
+        color : $headerFontColor;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-family: $bodyFont;
+        color : $bodyFontColor;
+        margin-bottom: 1em;
+
+        @include mQ($desktop) {
+            font-size: 1.3em;
+        }
+    }
+
+    ul {
+        list-style: disc;
+        margin-left: 10px;
+    }
+
+    li {
+        color : $bodyFontColor;
+        margin-bottom: .5em;
+        line-height: 1.5em;
+
+        @include mQ($desktop) {
+            font-size: 1.3em;
+        }
+    }
+
+    .website {
+        font-size: 1.5em;
+        display: flex;
+        align-items: center;
+        gap : 5px;
+    }
+}
+
+.gallery {
+    background-color: $firstBcgColor;
+    padding : $padding;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .container {
+        width : 100%;
+        margin-bottom: 1.5em;
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid #E4E5F1;
+        }
+
+        @include mQ($tablet) {
+            width : 80%;
+        }
+    }
+
+}

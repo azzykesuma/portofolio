@@ -42,7 +42,7 @@
       transition: 0.3s ease-in-out;
 
       @include mQ($tablet) {
-          width: 80%;
+          width: 90%;
           height: 80%;
       }
   }
@@ -89,6 +89,10 @@
 
       @include mQ($tablet) {
           height: 80%;
+      }
+
+      p {
+        max-width: 30ch;
       }
 
       @include mQ($desktop) {

@@ -124,7 +124,7 @@ a {
 }
 @media (min-width: 768px) {
   .showCase .porto {
-    width: 80%;
+    width: 90%;
     height: 80%;
   }
 }
@@ -176,6 +176,9 @@ a {
   .showCase .portoDesc.active {
     height: 80%;
   }
+}
+.showCase .portoDesc.active p {
+  max-width: 30ch;
 }
 @media (min-width: 1020px) {
   .showCase .portoDesc.active {
@@ -1032,6 +1035,11 @@ header .hamburger .three.active {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+@media (min-width: 1020px) {
+  .contact form .formWrap label {
+    font-size: 1.5em;
+  }
 }
 .contact form input, .contact form textarea {
   padding: 10px;

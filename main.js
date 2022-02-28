@@ -87,7 +87,7 @@ const button = form.querySelector('button');
 console.log(error);
 
 button.addEventListener('click', (e) => {
-  e.preventDefault();
+  // e.preventDefault();
   checkInput();
 })
 
