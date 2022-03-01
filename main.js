@@ -185,9 +185,9 @@ const toggle = () => {
       headerfour[i].style.color = '#D8E9A8'
     } 
     
-    for (let i = 0;i < links.length; i++) {
-      links[i].style.color = '#bb86fc'
-    } 
+    // for (let i = 0;i < links.length; i++) {
+    //   links[i].style.color = '#bb86fc'
+    // } 
 
     for (let i = 0;i < label.length; i++) {
       label[i].style.color = '#bb86fc'
@@ -225,9 +225,9 @@ const toggle = () => {
       headerfour[i].style.color = '#102542'
     } 
     
-    for (let i = 0;i < links.length; i++) {
-      links[i].style.color = '#bb86fc'
-    } 
+    // for (let i = 0;i < links.length; i++) {
+    //   links[i].style.color = '#fff'
+    // } 
     
     for (let i = 0;i < label.length; i++) {
       label[i].style.color = '#bb86fc'

@@ -29,11 +29,12 @@ main {
     padding : $padding;
     background-color: $firstBcgColor;
 
-    h1 {
+    h1,h2 {
         font-family: $headerFont;
         font-size: $headerFontSize;
-        margin-bottom: 1em;
+        margin-bottom: .5em;
         color : $headerFontColor;
+        line-height: 1.3em;
     }
 
     p {
@@ -87,6 +88,13 @@ main {
         @include mQ($desktop) {
             font-size: 1.3em;
         }
+    }
+
+    .website {
+        font-size: 1.5em;
+        display: flex;
+        align-items: center;
+        gap : 5px;
     }
 }
 

@@ -29,7 +29,6 @@ const toggle = () => {
     const topSection = document.querySelector('.topSection');
     const projectWrap = document.querySelector('.projectWrap');
     const footer = document.querySelector('footer');
-    const links= document.querySelectorAll('a');
     const icon = document.querySelectorAll('.icons')
     const text = document.querySelectorAll('.interactive__text')
     
@@ -44,10 +43,6 @@ const toggle = () => {
         two.style.backgroundColor = 'white';
         three.style.backgroundColor = 'white';
 
-
-        for (let i = 0;i < links.length; i++) {
-            links[i].style.color = '#bb86fc'
-        }
         
         for (let i = 0;i < text.length; i++) {
             text[i].style.color = 'white'
@@ -67,10 +62,6 @@ const toggle = () => {
         one.style.backgroundColor = 'black';
         two.style.backgroundColor = 'black';
         three.style.backgroundColor = 'black';
-
-        for (let i = 0;i < links.length; i++) {
-            links[i].style.color = '#bb86fc'
-        }
         
         for (let i = 0;i < text.length; i++) {
             text[i].style.color = '#102542'
