@@ -566,30 +566,3 @@ input:checked + .slider:before {
 .bottom_part form .errorEmail_active {
   display: block;
 }
-.bottom_part .socialFlag {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  gap: 10px;
-  position: absolute;
-  right: 0;
-}
-.bottom_part .socialFlag div {
-  display: block;
-  background-color: #fff;
-  width: 20px;
-  height: 50px;
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
-}
-.bottom_part .socialFlag .flag_active {
-  width: 50px;
-  height: 50px;
-}

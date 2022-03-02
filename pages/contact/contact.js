@@ -1,15 +1,3 @@
-const socialFlag = document.querySelector('.socialFlag');
-const flag = socialFlag.querySelectorAll('div');
-console.log(flag);
-
-for (let i = 0; i < flag.length; i++) {
-    flag[i].addEventListener('mouseover', hoverFlag);
-}
-
-function hoverFlag(e) {
-    const target = e.target;
-    target.classList.toggle('flag_active');
-}
 
 // dark mode
 const togglePort = document.getElementById('togglePort');
@@ -29,7 +17,8 @@ const toggleDarkMode = () => {
     const two = document.querySelector('.two');
     const three = document.querySelector('.three');
     const paragraph = document.querySelector('p');
-    const headerFour = document.querySelector('h4');
+    const interactive__text = document.querySelector('.interactive__text');
+    const icons = document.querySelectorAll('.icons')
 
     if (togglePort.checked) {
       mobileNav.style.backgroundColor = '#191A19';
@@ -43,7 +32,8 @@ const toggleDarkMode = () => {
       two.style.backgroundColor = '#fff';
       three.style.backgroundColor = '#fff';
       paragraph.style.color = '#fff';
-      headerFour.style.color = '#D8E9A8';
+      interactive__text.style.color = '#fff';
+      
 
       links.forEach(link => {
         link.style.color = '#bb86fc';
@@ -51,6 +41,10 @@ const toggleDarkMode = () => {
 
       label.forEach(label => {
         label.style.color = '#fff';
+      })
+
+      icons.forEach(icon => {
+        icon.style.color = '#fff'
       })
     } else {
       mobileNav.style.backgroundColor = '#E4E5F1';
@@ -64,17 +58,20 @@ const toggleDarkMode = () => {
       two.style.backgroundColor = 'black';
       three.style.backgroundColor = 'black';
       paragraph.style.color = '#102542';
-      headerFour.style.color = '#102542';
+      interactive__text.style.color = '#102542';
 
       links.forEach(link => {
-        link.style.color = '#bb86fc';
+        link.style.color = '#2F4858';
       });
 
       label.forEach(label => {
         label.style.color = 'black';
-      })
-    }
+      });
 
+      icons.forEach(icon => {
+        icon.style.color = '#18314F'
+      })
+  }
 }
 togglePort.addEventListener('change',toggleDarkMode);
 
@@ -119,10 +116,8 @@ const submitForm = () => {
     error[2].classList.remove('errorActive');
   }
 
-  alert('Thank you for your message!, we will get back to you soon');
 }
 
 submit.addEventListener('click',(e) => {
-  e.preventDefault();
   submitForm();
 });

@@ -31,6 +31,7 @@ const toggle = () => {
     const footer = document.querySelector('footer');
     const icon = document.querySelectorAll('.icons')
     const text = document.querySelectorAll('.interactive__text')
+    const links = document.querySelectorAll('a')
     
     if (togglePort.checked) {
         mode.style.color = '#fff';
@@ -51,11 +52,15 @@ const toggle = () => {
         for (let i = 0;i < icon.length; i++) {
             icon[i].style.color = 'white'
         }
+        
+        for (let i = 0;i < links.length; i++) {
+            links[i].style.color = '#fff'
+        }
     } else {
         mode.style.color = 'black';
         headerOne.style.color = '#484B6A'
         footer.style.backgroundColor = '#E4E5F1';
-        mobileNav.style.backgroundColor = '#E4E5F1';
+        mobileNav.style.backgroundColor = '#fff';
         sideNavContainer.style.backgroundColor = '#E4E5F1';
         topSection.style.backgroundColor = '#FAFAFA'
         projectWrap.style.backgroundColor = '#FAFAFA'
@@ -69,6 +74,10 @@ const toggle = () => {
 
         for (let i = 0;i < icon.length; i++) {
             icon[i].style.color = '#18314F'
+        }
+
+        for (let i = 0;i < links.length; i++) {
+            links[i].style.color = '#2F4858'
         }
     }
 }
