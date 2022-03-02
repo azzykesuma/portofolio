@@ -226,7 +226,7 @@ const toggle = () => {
     } 
     
     for (let i = 0;i < links.length; i++) {
-      links[i].style.color = '#2F4858'
+      links[i].style.color = '#'
     } 
     
     for (let i = 0;i < label.length; i++) {

@@ -991,6 +991,9 @@ header .hamburger .three.active {
     gap: 20px;
   }
 }
+.recentWork .viewWork {
+  color: #fff;
+}
 
 .contact {
   padding: 20px;
