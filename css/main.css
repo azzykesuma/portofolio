@@ -551,6 +551,7 @@ header .mobileNav {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 20px;
+  overflow-x: hidden;
 }
 @media (min-width: 768px) {
   header .mobileNav {
@@ -726,7 +727,7 @@ header .hamburger .three.active {
   font-size: 1.4em;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
-  color: #EDFFEC;
+  color: #fff;
 }
 .projectContainer .projects li ion-icon {
   font-size: 1.5em;
@@ -990,9 +991,6 @@ header .hamburger .three.active {
             justify-content: space-evenly;
     gap: 20px;
   }
-}
-.recentWork .viewWork {
-  color: #fff;
 }
 
 .contact {

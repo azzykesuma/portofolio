@@ -12,6 +12,7 @@ header {
         align-items: center;
         justify-content: space-between;
         padding : $padding;
+        overflow-x: hidden;
 
         @include mQ($tablet) {
             padding : 20px;
@@ -178,7 +179,7 @@ header {
             a {
                 font-size: 1.4em;
                 transition: .3s ease-in-out;
-                color : #EDFFEC;
+                color : #fff;
             }
     
             ion-icon {
@@ -384,10 +385,6 @@ header {
             justify-content: space-evenly;
             gap : 20px;
         }
-    }
-
-    .viewWork {
-        color: #fff;
     }
 }
 // contact section

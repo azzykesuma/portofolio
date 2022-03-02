@@ -154,6 +154,7 @@ const toggle = () => {
   const form = document.querySelector('form');
   const label = form.querySelectorAll('label');
   const icons = document.querySelectorAll('.icons');
+  const viewWork = document.querySelectorAll('.viewWork');
 
   
   if(toggleSwitch.checked) {
@@ -197,6 +198,10 @@ const toggle = () => {
       icons[i].style.color = 'white'
     }
 
+    for(let i = 0; i < viewWork.length; i++) {
+      viewWork[i].style.color = '#fff'
+    }
+
   } else {
     headerOne.style.color = '#484B6A'
     mode.style.color = '#484B6A'
@@ -208,7 +213,7 @@ const toggle = () => {
     footer.style.backgroundColor = '#E4E5F1';
     mobileNav.style.backgroundColor = '#E4E5F1';
     sideNavContainer.style.backgroundColor = '#E4E5F1';
-    projectContainer.style.backgroundColor = '#FAFAFA';
+    projectContainer.style.backgroundColor = '#7C898B';
     one.style.backgroundColor = 'black';
     two.style.backgroundColor = 'black';
     three.style.backgroundColor = 'black';
@@ -226,7 +231,7 @@ const toggle = () => {
     } 
     
     for (let i = 0;i < links.length; i++) {
-      links[i].style.color = '#'
+      links[i].style.color = '#fff'
     } 
     
     for (let i = 0;i < label.length; i++) {
@@ -235,6 +240,10 @@ const toggle = () => {
     
     for (let i = 0; i < icons.length; i++) {
       icons[i].style.color = '#18314F'
+    }
+
+    for(let i = 0; i < viewWork.length; i++) {
+      viewWork[i].style.color = '#fff'
     }
   }
 
