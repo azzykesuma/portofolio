@@ -18,6 +18,8 @@ const toggle = () => {
     const three = document.querySelector('.three');
     const links = document.querySelectorAll('a');
     const icons = document.querySelectorAll('.icons')
+    const sideNavContainer = document.querySelector('.sidenavContainer')
+    
 
     if(toggleSwitch.checked) {
         leftContainer.style.backgroundColor = '#191A19';
@@ -33,6 +35,7 @@ const toggle = () => {
         one.style.backgroundColor = '#fff';
         two.style.backgroundColor = '#fff';
         three.style.backgroundColor = '#fff';
+        sideNavContainer.style.backgroundColor = '#041C32';
 
         list.forEach( li => {
             li.style.color = '#fff';
@@ -63,6 +66,7 @@ const toggle = () => {
         one.style.backgroundColor = '#000';
         two.style.backgroundColor = '#000';
         three.style.backgroundColor = '#000';
+        sideNavContainer.style.backgroundColor = '#E4E5F1';
 
         list.forEach( li => {
             li.style.color = '#102542';

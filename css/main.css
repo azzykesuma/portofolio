@@ -663,6 +663,9 @@ header .hamburger .three.active {
 .sidenavContainer.active_nav .navList {
   padding: 20px;
 }
+.sidenavContainer.active_nav .navList .navLinks {
+  color: #200116;
+}
 .sidenavContainer.active_nav li {
   margin-bottom: 1.5em;
   margin-left: -10px;
@@ -992,6 +995,9 @@ header .hamburger .three.active {
     gap: 20px;
   }
 }
+.recentWork .seeMore {
+  color: #102542;
+}
 
 .contact {
   padding: 20px;
@@ -1107,6 +1113,9 @@ footer ul {
 }
 footer li {
   margin-bottom: 0.8em;
+}
+footer .footerLinks {
+  color: #200116;
 }
 @media (min-width: 768px) {
   footer a {

@@ -19,6 +19,8 @@ const toggleDarkMode = () => {
     const paragraph = document.querySelector('p');
     const interactive__text = document.querySelector('.interactive__text');
     const icons = document.querySelectorAll('.icons')
+    const navLinks = document.querySelectorAll('.navLinks');
+    const mode = document.getElementById('mode');
 
     if (togglePort.checked) {
       mobileNav.style.backgroundColor = '#191A19';
@@ -33,6 +35,7 @@ const toggleDarkMode = () => {
       three.style.backgroundColor = '#fff';
       paragraph.style.color = '#fff';
       interactive__text.style.color = '#fff';
+      mode.innerHTML = 'Dark Mode';
       
 
       links.forEach(link => {
@@ -45,6 +48,10 @@ const toggleDarkMode = () => {
 
       icons.forEach(icon => {
         icon.style.color = '#fff'
+      })
+
+      navLinks.forEach(link => {
+        link.style.color = '#fff';
       })
     } else {
       mobileNav.style.backgroundColor = '#E4E5F1';
@@ -59,6 +66,7 @@ const toggleDarkMode = () => {
       three.style.backgroundColor = 'black';
       paragraph.style.color = '#102542';
       interactive__text.style.color = '#102542';
+      mode.innerHTML = 'Light Mode';
 
       links.forEach(link => {
         link.style.color = '#2F4858';
@@ -70,6 +78,10 @@ const toggleDarkMode = () => {
 
       icons.forEach(icon => {
         icon.style.color = '#18314F'
+      })
+
+      navLinks.forEach(link => {
+        link.style.color = '#200116';
       })
   }
 }

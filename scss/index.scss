@@ -117,7 +117,12 @@ header {
 
     .navList {
         padding : $padding;
+
+        .navLinks {
+            color : #200116;
+        } 
     }
+
 
     li {
         margin-bottom: 1.5em;
@@ -386,6 +391,10 @@ header {
             gap : 20px;
         }
     }
+
+    .seeMore {
+        color : #102542;
+    }
 }
 // contact section
 .contact {
@@ -491,6 +500,10 @@ footer {
 
     li {
         margin-bottom: .8em;
+    }
+
+    .footerLinks {
+        color : #200116;
     }
 
     a {

@@ -155,6 +155,10 @@ const toggle = () => {
   const label = form.querySelectorAll('label');
   const icons = document.querySelectorAll('.icons');
   const viewWork = document.querySelectorAll('.viewWork');
+  const navLinks = document.querySelectorAll('.navLinks');
+  const footerLinks = document.querySelectorAll('.footerLinks');
+  const seeMore = document.querySelector('.seeMore');
+
 
   
   if(toggleSwitch.checked) {
@@ -169,9 +173,10 @@ const toggle = () => {
     mobileNav.style.backgroundColor = '#191A19';
     sideNavContainer.style.backgroundColor = '#041C32';
     projectContainer.style.backgroundColor = '#04293A';
-    one.style.backgroundColor = 'white';
-    two.style.backgroundColor = 'white';
-    three.style.backgroundColor = 'white';
+    one.style.backgroundColor = '#fff';
+    two.style.backgroundColor = '#fff';
+    three.style.backgroundColor = '#fff';
+    seeMore.style.color = '#fff';
 
 
     for (let i = 0;i < paragraph.length; i++) {
@@ -202,6 +207,14 @@ const toggle = () => {
       viewWork[i].style.color = '#fff'
     }
 
+    for (let i = 0; i < navLinks.length; i++) {
+      navLinks[i].style.color = '#fff'
+    }
+
+    for (let i = 0; i < footerLinks.length; i++) {
+      footerLinks[i].style.color = '#fff'
+    }
+
   } else {
     headerOne.style.color = '#484B6A'
     mode.style.color = '#484B6A'
@@ -214,9 +227,10 @@ const toggle = () => {
     mobileNav.style.backgroundColor = '#E4E5F1';
     sideNavContainer.style.backgroundColor = '#E4E5F1';
     projectContainer.style.backgroundColor = '#7C898B';
-    one.style.backgroundColor = 'black';
-    two.style.backgroundColor = 'black';
-    three.style.backgroundColor = 'black';
+    one.style.backgroundColor = '#000';
+    two.style.backgroundColor = '#000';
+    three.style.backgroundColor = '#000';
+    seeMore.style.color = '#102542';
 
     for (let i = 0;i < paragraph.length; i++) {
       paragraph[i].style.color = 'black'
@@ -230,9 +244,9 @@ const toggle = () => {
       headerfour[i].style.color = '#102542'
     } 
     
-    for (let i = 0;i < links.length; i++) {
-      links[i].style.color = '#fff'
-    } 
+    // for (let i = 0;i < links.length; i++) {
+    //   links[i].style.color = '#fff'
+    // } 
     
     for (let i = 0;i < label.length; i++) {
       label[i].style.color = '#bb86fc'
@@ -244,6 +258,14 @@ const toggle = () => {
 
     for(let i = 0; i < viewWork.length; i++) {
       viewWork[i].style.color = '#fff'
+    }
+
+    for (let i = 0; i < navLinks.length; i++) {
+      navLinks[i].style.color = '#200116'
+    }
+
+    for (let i = 0; i < footerLinks.length; i++) {
+      footerLinks[i].style.color = '#200116'
     }
   }
 

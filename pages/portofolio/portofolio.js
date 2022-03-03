@@ -32,6 +32,9 @@ const toggle = () => {
     const icon = document.querySelectorAll('.icons')
     const text = document.querySelectorAll('.interactive__text')
     const links = document.querySelectorAll('a')
+    const navLinks = document.querySelectorAll('.navLinks');
+    const viewWork = document.querySelectorAll('.viewWork');
+
     
     if (togglePort.checked) {
         mode.style.color = '#fff';
@@ -40,9 +43,10 @@ const toggle = () => {
         topSection.style.backgroundColor = '#191A19'
         projectWrap.style.backgroundColor = '#191A19'
         footer.style.backgroundColor = '#191A19'
-        one.style.backgroundColor = 'white';
-        two.style.backgroundColor = 'white';
-        three.style.backgroundColor = 'white';
+        one.style.backgroundColor = '#fff';
+        two.style.backgroundColor = '#fff';
+        three.style.backgroundColor = '#fff';
+        sideNavContainer.style.backgroundColor = '#041C32';
 
         
         for (let i = 0;i < text.length; i++) {
@@ -56,6 +60,14 @@ const toggle = () => {
         for (let i = 0;i < links.length; i++) {
             links[i].style.color = '#fff'
         }
+
+        for (let i = 0; i < navLinks.length; i++) {
+            navLinks[i].style.color = '#fff'
+        }
+
+        for(let i = 0; i < viewWork.length; i++) {
+            viewWork[i].style.color = '#fff'
+        }
     } else {
         mode.style.color = 'black';
         headerOne.style.color = '#484B6A'
@@ -64,9 +76,10 @@ const toggle = () => {
         sideNavContainer.style.backgroundColor = '#E4E5F1';
         topSection.style.backgroundColor = '#FAFAFA'
         projectWrap.style.backgroundColor = '#FAFAFA'
-        one.style.backgroundColor = 'black';
-        two.style.backgroundColor = 'black';
-        three.style.backgroundColor = 'black';
+        one.style.backgroundColor = '#000';
+        two.style.backgroundColor = '#000';
+        three.style.backgroundColor = '#000';
+        sideNavContainer.style.backgroundColor = '#E4E5F1';
         
         for (let i = 0;i < text.length; i++) {
             text[i].style.color = '#102542'
@@ -78,6 +91,14 @@ const toggle = () => {
 
         for (let i = 0;i < links.length; i++) {
             links[i].style.color = '#2F4858'
+        }
+
+        for (let i = 0; i < navLinks.length; i++) {
+            navLinks[i].style.color = '#200116'
+        }
+
+        for(let i = 0; i < viewWork.length; i++) {
+            viewWork[i].style.color = '#fff'
         }
     }
 }
