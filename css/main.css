@@ -103,6 +103,10 @@ a {
   }
 }
 
+.navLinks {
+  color: #200116;
+}
+
 .showCase {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -662,9 +666,6 @@ header .hamburger .three.active {
 }
 .sidenavContainer.active_nav .navList {
   padding: 20px;
-}
-.sidenavContainer.active_nav .navList .navLinks {
-  color: #200116;
 }
 .sidenavContainer.active_nav li {
   margin-bottom: 1.5em;

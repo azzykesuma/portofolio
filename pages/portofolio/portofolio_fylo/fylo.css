@@ -35,6 +35,10 @@
   }
 }
 
+.navLinks {
+  color: #200116;
+}
+
 .showCase {
   display: -webkit-box;
   display: -ms-flexbox;
